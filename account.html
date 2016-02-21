@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Tea Time - My Account</title>
+	<link rel="stylesheet" href="style/base.css">
+	<link rel="stylesheet" href="style/account.css">
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+	<!-- Latest compiled JavaScript -->
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+	<!-- Header Section & Nav Bar -->
+	<a href="index.html"><div id="banner" class="container-fluid">
+		<img src="img/banner.png" alt="Banner Image">
+	</div></a>
+
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<div id="topnav" class="container-fluid">
+	  		<ul class="nav navbar-nav">
+				<li><a href="aboutus.html">About Us</a></li> 
+				<li><a href="contactus.html">Contact Us</a></li>
+				<li id="catalogue-dropdown" class="dropdown">
+					<a class="dropdown-toggle" data-toggle="dropdown" href="#">Catalogue<span class="caret"></span></a>
+		       			<ul class="dropdown-menu">
+			          		<li><a href="catalogue.html#black-tea">Black</a></li>
+				          	<li><a href="catalogue.html#green-tea">Green</a></li>
+				         	<li><a href="catalogue.html#oolong-tea">Oolong</a></li>
+				          	<li><a href="catalogue.html#white-tea">White</a></li>
+			         		<li><a href="catalogue.html#puerh-tea">Pu-Erh</a></li>
+			        	</ul>
+	        	</li>
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="login.html">Log In/Sign Up</a></li>
+		  	</ul>
+  		</div> 
+	</nav>
+
+	<!-- Main Section -->
+	<div id="main" class="container"> 	
+		<!-- NOTE TO TEAM: ONLY MAKE CHANGES WITHIN MAIN SECTION, DO NOT CHANGE ANYTHING OUTSIDE -->
+		<h1>My Account</h1> 
+		
+		<!-- Modify Account Form -->
+		<div id="form">
+			<form action="http://webdevfoundations.net/scripts/formdemo.asp" method="post"> 
+				<table>
+				   <tr>
+					   <td> 
+						<label for="email">Email:</label>
+					   </td> 
+					   <td> 
+						<input type="text" name="email">
+					   </td> 
+				   </tr>
+				   <tr>
+					   <td> 
+						<label for="username">Username:</label>
+					   </td> 
+					   <td> 
+						<input type="text" name="username">
+					   </td> 
+				   </tr>
+				   <tr>
+					   <td> 
+						<label for="password">Password:</label>
+					   </td> 
+					   <td> 
+						<input type="password" name="password">
+					   </td> 
+				   </tr>
+				   <tr>
+					   <td> 
+						<label for="password">Confirm Password:</label>
+					   </td> 
+					   <td> 
+						<input type="password" name="password">
+					   </td> 
+				   </tr>
+				   <tr>
+					   <td> 
+						<label for="firstname">First Name:</label>
+					   </td> 
+					   <td> 
+						<input type="text" name="firstname">
+					   </td> 
+				   </tr>
+				   <tr>
+					   <td> 
+						<label for="lastname">Last Name:</label>
+					   </td> 
+					   <td> 
+						<input type="text" name="lastname">
+					   </td> 
+				   </tr>
+				   <tr>
+					   <td> 
+						<label for="phone">Phone Number:</label>
+					   </td> 
+					   <td> 
+						<input type="text" name="phone">
+					   </td> 
+				   </tr>
+				   <tr>
+					   <td>
+						<input type="submit" value="Edit" id="submit" action="post"> 
+					   </td> 
+					   <td>
+						<input type="submit" value="Save Changes" id="submit" action="post"> 
+					   </td>
+				   </tr> 
+				</table>
+			</form>  
+		</div>
+
+		<!-- User Wishlist --> 
+		<div id="wishlist"> 
+			<h3>Wish List</h3>
+
+			<!-- Table of Wishlist Items--> 
+			<table>
+			  <tr>
+			    <td>Oolong</td>
+			    <td>Ti Guanyin</td>
+			  </tr> 
+			  <tr> 
+				<td>White</td>
+				<td>Guaranse</td> 
+			  </tr> 
+			  <tr> 
+				<td>Assam</td>
+				<td>Seajuli</td> 
+			  </tr> 
+			  <tr> 
+				<td>Darjeeling</td>
+				<td>Balasun</td> 
+			  </tr> 
+			  <tr> 
+				<td colspan="2">
+					<input type="submit" value="Edit Wish List" id="submit" action="post"> 
+				</td> 
+			  </tr> 
+			  <tr> 
+				<td colspan="2">
+					<input type="submit" value="Delete Wish List" id="submit" action="post"> 
+				</td> 
+			  </tr> 
+			</table> 
+		</div>
+	</div>
+
+	<!-- Footer Section -->
+	<div id="lowernavbar" class="container-fluid">
+		<ul>
+			<li><a href="aboutus.html">About Us</a></li> 
+			<li><a href="contactus.html">Contact Us</a></li>
+			<li><a href="catalogue.html">Catalogue</a></li>
+		</ul>
+	</div>
+	
+
+</body> 
+
+</html>  

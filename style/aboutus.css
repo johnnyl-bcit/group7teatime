@@ -1,0 +1,26 @@
+/* Background image */
+#main {
+    background-image: url("../img/teapot.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 872px;
+}
+
+/* Styling for the opaque black box shown under the about us text */
+#opaque-div {
+	border: 1px solid black;
+	background-color: black;
+	opacity: 0.6;
+}
+
+/* Styling for the about us text */
+#main h1 {
+	text-align: center;
+	color: white;
+	margin-bottom: 20px;
+}
+
+#main p {
+	padding-left: 80px;
+	padding-right: 80px;
+	color: white;
+}

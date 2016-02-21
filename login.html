@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Tea Time - Login</title>
+	<link rel="stylesheet" href="style/base.css">
+	<link rel="stylesheet" href="style/loginsignup.css">
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+	<!-- Latest compiled JavaScript -->
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+	<!-- Header Section & Nav Bar -->
+	<a href="index.html"><div id="banner" class="container-fluid">
+		<img src="img/banner.png" alt="Banner Image">
+	</div></a>
+
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<div id="topnav" class="container-fluid">
+	  		<ul class="nav navbar-nav">
+				<li><a href="aboutus.html">About Us</a></li> 
+				<li><a href="contactus.html">Contact Us</a></li>
+				<li id="catalogue-dropdown" class="dropdown">
+					<a class="dropdown-toggle" data-toggle="dropdown" href="#">Catalogue<span class="caret"></span></a>
+		       			<ul class="dropdown-menu">
+			          		<li><a href="catalogue.html#black-tea">Black</a></li>
+				          	<li><a href="catalogue.html#green-tea">Green</a></li>
+				         	<li><a href="catalogue.html#oolong-tea">Oolong</a></li>
+				          	<li><a href="catalogue.html#white-tea">White</a></li>
+			         		<li><a href="catalogue.html#puerh-tea">Pu-Erh</a></li>
+			        	</ul>
+	        	</li>
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="login.html">Log In/Sign Up</a></li>
+		  	</ul>
+  		</div> 
+	</nav>
+
+	<!-- Main Section -->
+	<div id="main" class="container"> 	
+		<!-- NOTE TO TEAM: ONLY MAKE CHANGES WITHIN MAIN SECTION, DO NOT CHANGE ANYTHING OUTSIDE -->
+		<h2>Log In</h2>
+
+		<div id="form">
+			<form action="http://webdevfoundations.net/scripts/formdemo.asp" method="post"> 
+				<table>
+				   <tr>
+					   <td> 
+						<label for="username">Username:</label>
+					   </td> 
+					   <td> 
+						<input type="text" name="username">
+					   </td> 
+				   </tr>
+				   <tr>
+					   <td> 
+						<label for="password">Password:</label>
+					   </td> 
+					   <td> 
+						<input type="password" name="password">
+					   </td> 
+				   </tr>
+				   <tr>
+					   <td>
+					   </td> 
+					   <td>
+						<input type="submit" value="Log In" id="submit"> 
+					   </td>
+				   </tr> 
+				</table>
+			</form> 
+			<br> 
+			<p>New to this site?</p> 
+			<br> 
+			<p>Please sign up <a href="signup.html">here</a>.</p>
+			<br>
+			<p><a href="account.html">View the My Account page</a></p>
+		</div>
+	</div>
+
+	<!-- Footer Section -->
+	<div id="lowernavbar" class="container-fluid">
+		<ul>
+			<li><a href="aboutus.html">About Us</a></li> 
+			<li><a href="contactus.html">Contact Us</a></li>
+			<li><a href="catalogue.html">Catalogue</a></li>
+		</ul>
+	</div>
+	
+
+</body> 
+
+</html>  

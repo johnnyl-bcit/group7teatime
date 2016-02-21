@@ -1,0 +1,31 @@
+#main {
+	padding-bottom: 3em;
+}
+
+#main h1 {
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 25px;
+	background-color: #E7512D;
+	color: white;
+	padding: 10px;
+	text-align: center;
+	font-size: 1.5em;
+}
+
+#info h2, p {
+	text-align: center;	
+}
+
+#info h2 {
+	font-size: 1.5em;
+	font-style: bold;
+}
+
+#map {
+	border-left: 2px solid #E9DDC4;
+}
+
+#map > div {
+	margin: auto;
+}

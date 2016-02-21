@@ -1,0 +1,95 @@
+/* Content header */
+#main h1 {
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 25px;
+	background-color: #E7512D;
+	color: white;
+	padding: 10px;
+	text-align: center;
+	font-size: 1.5em;
+}
+
+/* User account info */
+input, textarea {
+    color: black;
+}
+
+textarea:focus, input:focus {
+    color: black;
+}
+
+#form {
+	float: left;
+	margin-left: 50px;
+	margin-bottom:  25px; 
+	width: 50%;
+	background-color: #E7512D;
+	padding: 10px;
+	font-size: 1.2em;
+}
+
+#form td {
+	width: 50%;
+	padding: 10px;
+}
+
+#form label {
+	color: white;
+}
+
+#form input {
+	width: 225px;
+	font-size: 0.8em;
+	border: 1px solid #faebd7;
+}
+
+#form p {
+	text-align: center; 
+}
+
+
+/* Wishlist table */
+#wishlist {
+	float: left; 
+	margin-right: 50px;
+	margin-left: 100px;
+	margin-bottom:  25px; 
+	width: 30%;
+	height: 400px; 
+	background-color: #E7512D;
+	padding: 10px;
+	color: white;
+	font-size: 1.2em;
+}
+
+#wishlist h3 {
+	text-align: center;
+	font-size: 1.21em;
+}
+
+#wishlist table {
+	margin-left: auto;
+	margin-right: auto; 
+}
+
+#wishlist td {
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 5px;
+}
+
+#wishlist td:last-child {
+	font-style: italic; 
+}
+
+#wishlist input {
+	margin-top: 10px;
+	width: 100%;
+	font-size: 0.8em;
+	border: 1px solid #faebd7;
+}
+
+#submit {
+	color: black;
+}

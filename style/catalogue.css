@@ -1,0 +1,43 @@
+#main h1 {
+	text-align: center;
+}
+
+#main .col-sm-6 {
+	padding: 10px;
+	position: relative;
+	color: white;
+
+}
+
+#main .col-sm-6 > div {
+	background: #E7512D;
+	overflow: auto;
+
+}
+
+#main .col-sm-6 > div > h2{
+	text-align: center;
+}
+
+#main .col-sm-6 > div > p {
+	text-align: center;
+}
+
+#main img {
+	float: left;
+	margin: 0 10px 0px 0px;
+	
+}
+.star {
+	position: absolute;
+	margin-top: 0px; 
+	top: 6px; /* checkbox has default margin-top: 4px that I can't seem to get rid of */
+	right: 10px;
+}
+
+.more {
+	position: absolute;
+	bottom: 20px;
+	right: 20px;
+	color: white;
+}
