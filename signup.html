@@ -14,6 +14,8 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 	<!-- Latest compiled JavaScript -->
 	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <!-- Client-side validation JavaScript -->
+    <script src="js/signupaccount.js"></script>
 </head>
 
 <body>
@@ -57,7 +59,7 @@
 						<label for="email">Email:</label>
 					   </td> 
 					   <td> 
-						<input type="text" name="email">
+						<input type="text" name="email" id="email" onblur="checkEmail()">
 					   </td> 
 				   </tr>
 				   <tr>
@@ -65,7 +67,7 @@
 						<label for="username">Username:</label>
 					   </td> 
 					   <td> 
-						<input type="text" name="username">
+						<input type="text" name="username" id="username" onblur="checkUsername()">
 					   </td> 
 				   </tr>
 				   <tr>
@@ -73,15 +75,15 @@
 						<label for="password">Password:</label>
 					   </td> 
 					   <td> 
-						<input type="password" name="password">
+						<input type="password" name="password" id="password">
 					   </td> 
 				   </tr>
 				   <tr>
 					   <td> 
-						<label for="password">Confirm Password:</label>
+						<label for="confirmpw">Confirm Password:</label>
 					   </td> 
 					   <td> 
-						<input type="password" name="password">
+						<input type="password" name="confirmpw" id="confirmpw" onblur="checkPW()">
 					   </td> 
 				   </tr>
 				   <tr>
@@ -89,7 +91,7 @@
 						<label for="firstname">First Name:</label>
 					   </td> 
 					   <td> 
-						<input type="text" name="firstname">
+						<input type="text" name="firstname" id="firstname" onblur="checkFirstName()">
 					   </td> 
 				   </tr>
 				   <tr>
@@ -97,7 +99,7 @@
 						<label for="lastname">Last Name:</label>
 					   </td> 
 					   <td> 
-						<input type="text" name="lastname">
+						<input type="text" name="lastname" id="lastname" onblur="checkLastName()">
 					   </td> 
 				   </tr>
 				   <tr>
@@ -105,14 +107,14 @@
 						<label for="phone">Phone Number:</label>
 					   </td> 
 					   <td> 
-						<input type="text" name="phone">
+						<input type="text" name="phone" id="phone" onblur="checkPhone()">
 					   </td> 
 				   </tr>
 				   <tr>
 					   <td>
 					   </td> 
 					   <td>
-						<input type="submit" value="Create Account" id="submit" action=> 
+						<input type="submit" value="Create Account" id="create"> 
 					   </td>
 				   </tr> 
 				</table>
