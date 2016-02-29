@@ -3,13 +3,13 @@
     background-image: url("../img/teapot.jpg");
     background-repeat: no-repeat;
     background-size: 100% 872px;
+    padding-bottom: 25px;
 }
 
 /* Styling for the opaque black box shown under the about us text */
 #opaque-div {
 	border: 1px solid black;
-	background-color: black;
-	opacity: 0.6;
+	background-color: rgba(0, 0, 0, 0.6);
 }
 
 /* Styling for the about us text */
