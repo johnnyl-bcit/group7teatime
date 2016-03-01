@@ -63,3 +63,24 @@ textarea:focus, input:focus {
 #submit {
 	color: black;
 }
+
+#validation {
+    color: white;
+}
+
+fieldset div {
+    margin-bottom: 2em;
+}
+fieldset .help {
+    display: inline-block;
+}
+
+.ui-tooltip {
+    padding: 10px 20px;
+    color: white;
+    border-radius: 20px;
+    font-family: "Calibri", sans-serif;
+    font-size: 1.0em;
+    box-shadow: 0 0 7px black;
+    background: black;
+  }

@@ -48,6 +48,10 @@ textarea:focus, input:focus {
 	text-align: center; 
 }
 
+#validation {
+    color: white;
+}
+
 
 /* Wishlist table */
 #wishlist {
@@ -88,6 +92,7 @@ textarea:focus, input:focus {
 	width: 100%;
 	font-size: 0.8em;
 	border: 1px solid #faebd7;
+    color:  black;
 }
 
 #submit {

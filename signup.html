@@ -6,7 +6,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Tea Time - Signup</title>
 	<link rel="stylesheet" href="style/base.css">
-	<link rel="stylesheet" href="style/loginsignup.css">
 
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
@@ -16,6 +15,22 @@
 	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <!-- Client-side validation JavaScript -->
     <script src="js/signupaccount.js"></script>
+    <!-- JQuery for form tooltips-->
+     <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <script>
+    $(function() {
+        var tooltips = $( "[title]" ).tooltip({
+        position: {
+        my: "left top",
+        at: "right+5 top-5"
+        }
+        });
+    });
+    </script>
+    
+	<link rel="stylesheet" href="style/loginsignup.css">
 </head>
 
 <body>
@@ -59,7 +74,7 @@
 						<label for="email">Email:</label>
 					   </td> 
 					   <td> 
-						<input type="text" name="email" id="email" onblur="checkEmail()">
+						<input type="text" name="email" id="email" onblur="checkEmail()" title="We will not share your email with any other parties.">
 					   </td> 
 				   </tr>
 				   <tr>
@@ -67,7 +82,7 @@
 						<label for="username">Username:</label>
 					   </td> 
 					   <td> 
-						<input type="text" name="username" id="username" onblur="checkUsername()">
+						<input type="text" name="username" id="username" onblur="checkUsername()" title="Your username can contain letters, numbers, and the _ character.">
 					   </td> 
 				   </tr>
 				   <tr>
@@ -75,7 +90,7 @@
 						<label for="password">Password:</label>
 					   </td> 
 					   <td> 
-						<input type="password" name="password" id="password">
+						<input type="password" name="password" id="password" title="For a secure password, combine letters, numbers, and symbols.">
 					   </td> 
 				   </tr>
 				   <tr>
@@ -91,7 +106,7 @@
 						<label for="firstname">First Name:</label>
 					   </td> 
 					   <td> 
-						<input type="text" name="firstname" id="firstname" onblur="checkFirstName()">
+						<input type="text" name="firstname" id="firstname" onblur="checkFirstName()" title="We need your name to keep track of your orders.">
 					   </td> 
 				   </tr>
 				   <tr>
@@ -107,7 +122,7 @@
 						<label for="phone">Phone Number:</label>
 					   </td> 
 					   <td> 
-						<input type="text" name="phone" id="phone" onblur="checkPhone()">
+						<input type="text" name="phone" id="phone" onblur="checkPhone()" title="We will only use your phone number to contact you about your orders.">
 					   </td> 
 				   </tr>
 				   <tr>
@@ -119,23 +134,23 @@
 				   </tr> 
 				</table>
 			</form> 
-			<br> 
+            <br>
+            <span id="validation"></span>
+			<br>
 			<p>Already have an account?</p> 
-			<br> 
 			<p>Please log in <a href="login.html">here</a>.</p> 
 	  	</div>
 	</div>
 
 	<!-- Footer Section -->
-	<footer class="footer">
-		<div class="container-fluid">
-			<ul>
-				<li><a href="aboutus.html">About Us</a></li> 
-				<li><a href="contactus.html">Contact Us</a></li>
-				<li><a href="catalogue.html">Catalogue</a></li>
-			</ul>
-		</div>
-	</footer>	
+	<div id="lowernavbar" class="container-fluid">
+		<ul>
+			<li><a href="aboutus.html">About Us</a></li> 
+			<li><a href="contactus.html">Contact Us</a></li>
+			<li><a href="catalogue.html">Catalogue</a></li>
+		</ul>
+	</div>
+	
 
 </body> 
 
