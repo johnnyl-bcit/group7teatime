@@ -16,6 +16,19 @@
 	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <!-- Client-side validation JavaScript -->
     <script src="js/signupaccount.js"></script>
+    <!-- JQuery for submit button-->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <script>
+    $(function() {
+    $( "input[type=submit]" )
+      .button()
+      .click(function( event ) {
+        event.preventDefault();
+      });
+    });
+    </script>
 </head>
 
 <body>
