@@ -84,3 +84,16 @@ fieldset .help {
     box-shadow: 0 0 7px black;
     background: black;
   }
+
+.ui-button {
+    color:  black;
+    background:  white;
+    font-family: "Calibri", sans-serif;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.ui-button:hover {
+    color: #E7512D;
+    background:  #faebd7;
+}
