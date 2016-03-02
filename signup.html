@@ -31,9 +31,6 @@
     $(function() {
     $( "input[type=submit]" )
       .button()
-      .click(function( event ) {
-        event.preventDefault();
-      });
     });
     </script>
     
@@ -74,7 +71,7 @@
 		<h2>Signup</h2>
 
 	  	<div id="form">
-			<form action="http://webdevfoundations.net/scripts/formdemo.asp" method="post"> 
+			<form action="http://webdevfoundations.net/scripts/formdemo.asp" method="post" onsubmit="return validateSignup();"> 
 				<table>
 				   <tr>
 					   <td> 
@@ -82,30 +79,36 @@
 					   </td> 
 					   <td> 
 						<input type="text" name="email" id="email" onblur="checkEmail()" title="We will not share your email with any other parties.">
-					   </td> 
+					    <span class="validation" id="valEmail"></span>
+                       </td> 
 				   </tr>
 				   <tr>
 					   <td> 
 						<label for="username">Username:</label>
 					   </td> 
 					   <td> 
-						<input type="text" name="username" id="username" onblur="checkUsername()" title="Your username can contain letters, numbers, and the _ character.">
-					   </td> 
+						<input type="text" name="username" id="username" onblur="checkUsername()" 
+                           title="Your username can contain letters, numbers, and the _ character.">
+					    <span class="validation" id="valUsername"></span>
+                       </td> 
 				   </tr>
 				   <tr>
 					   <td> 
 						<label for="password">Password:</label>
 					   </td> 
 					   <td> 
-						<input type="password" name="password" id="password" title="For a secure password, combine letters, numbers, and symbols.">
-					   </td> 
+						<input type="password" name="password" id="password" onblur="checkPW()" 
+                           title="For a secure password, combine letters, numbers, and symbols.">
+                        <span class="validation" id="valPW"></span>
+                       </td> 
 				   </tr>
 				   <tr>
 					   <td> 
 						<label for="confirmpw">Confirm Password:</label>
 					   </td> 
 					   <td> 
-						<input type="password" name="confirmpw" id="confirmpw" onblur="checkPW()">
+						<input type="password" name="confirmpw" id="confirmpw" onblur="checkPWConfirm()">
+                        <span class="validation" id="valPWConfirm"></span>
 					   </td> 
 				   </tr>
 				   <tr>
@@ -114,7 +117,8 @@
 					   </td> 
 					   <td> 
 						<input type="text" name="firstname" id="firstname" onblur="checkFirstName()" title="We need your name to keep track of your orders.">
-					   </td> 
+					    <span class="validation" id="valFirstName"></span>
+                       </td> 
 				   </tr>
 				   <tr>
 					   <td> 
@@ -122,6 +126,7 @@
 					   </td> 
 					   <td> 
 						<input type="text" name="lastname" id="lastname" onblur="checkLastName()">
+                        <span class="validation" id="valLastName"></span>
 					   </td> 
 				   </tr>
 				   <tr>
@@ -130,7 +135,8 @@
 					   </td> 
 					   <td> 
 						<input type="text" name="phone" id="phone" onblur="checkPhone()" title="We will only use your phone number to contact you about your orders.">
-					   </td> 
+                        <span class="validation" id="valPhone"></span>
+                       </td> 
 				   </tr>
 				   <tr>
 					   <td>
@@ -142,7 +148,6 @@
 				</table>
 			</form> 
             <br>
-            <span id="validation"></span>
 			<br>
 			<p>Already have an account?</p> 
 			<p>Please log in <a href="login.html">here</a>.</p> 

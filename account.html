@@ -23,9 +23,6 @@
     $(function() {
     $( "input[type=submit]" )
       .button()
-      .click(function( event ) {
-        event.preventDefault();
-      });
     });
     </script>
 
@@ -67,7 +64,7 @@
 		
 		<!-- Modify Account Form -->
 		<div id="form">
-			<form action="http://webdevfoundations.net/scripts/formdemo.asp" method="post"> 
+			<form action="http://webdevfoundations.net/scripts/formdemo.asp" method="post" onsubmit="return validateSignup();"> 
 				<table>
 				   <tr>
 					   <td> 
@@ -75,6 +72,7 @@
 					   </td> 
 					   <td> 
 						<input type="text" name="email" id="email" onblur="checkEmail()">
+                        <span class="validation" id="valEmail"></span>
 					   </td> 
 				   </tr>
 				   <tr>
@@ -83,6 +81,7 @@
 					   </td> 
 					   <td> 
 						<input type="text" name="username" id="username" onblur="checkUsername()">
+                        <span class="validation" id="valUsername"></span>
 					   </td> 
 				   </tr>
 				   <tr>
@@ -90,7 +89,8 @@
 						<label for="password">Password:</label>
 					   </td> 
 					   <td> 
-						<input type="password" name="password" id="password">
+						<input type="password" name="password" id="password" onblur="checkPW()">
+                        <span class="validation" id="valPW"></span>
 					   </td> 
 				   </tr>
 				   <tr>
@@ -98,7 +98,8 @@
 						<label for="confirmpw">Confirm Password:</label>
 					   </td> 
 					   <td> 
-						<input type="password" name="confirmpw" id="confirmpw" onblur="checkPW()">
+						<input type="password" name="confirmpw" id="confirmpw" onblur="checkPWConfirm()">
+                        <span class="validation" id="valPWConfirm"></span>
 					   </td> 
 				   </tr>
 				   <tr>
@@ -107,6 +108,7 @@
 					   </td> 
 					   <td> 
 						<input type="text" name="firstname" id="firstname" onblur="checkFirstName()">
+                        <span class="validation" id="valFirstName"></span>
 					   </td> 
 				   </tr>
 				   <tr>
@@ -115,6 +117,7 @@
 					   </td> 
 					   <td> 
 						<input type="text" name="lastname" id="lastname" onblur="checkLastName()">
+                        <span class="validation" id="valLastName"></span>
 					   </td> 
 				   </tr>
 				   <tr>
@@ -123,20 +126,20 @@
 					   </td> 
 					   <td> 
 						<input type="text" name="phone" id="phone" onblur="checkPhone()">
+                        <span class="validation" id="valPhone"></span>
 					   </td> 
 				   </tr>
 				   <tr>
 					   <td>
-						<input type="submit" value="Edit" id="edit" name="edit"> 
-					   </td> 
-					   <td>
-						<input type="submit" value="Save Changes" id="save" name="save"> 
 					   </td>
+                       <td>
+						<input type="submit" value="Save Changes" id="save"> 
+                       </td>
 				   </tr> 
+                    
 				</table>
 			</form>  
             <br>
-            <span id="validation"></span>
 		</div>
 
 		<!-- User Wishlist --> 

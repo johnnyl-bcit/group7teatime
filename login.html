@@ -14,19 +14,16 @@
 	<!-- Latest compiled JavaScript -->
 	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <!-- Client-side validation JavaScript -->
-    <script src="js/login.js"></script>
+    <script src="js/signupaccount.js"></script>
     <!-- JQuery for submit button-->
     <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
     <script src="//code.jquery.com/jquery-1.10.2.js"></script>
     <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
     <script>
-    $(function() {
-    $( "input[type=submit]" )
-      .button()
-      .click(function( event ) {
-        event.preventDefault();
-      });
-    });
+        $(function () {
+            $("input[type=submit]")
+          .button()
+        });
     </script>
 
 	<link rel="stylesheet" href="style/loginsignup.css">
@@ -66,7 +63,7 @@
 		<h2>Log In</h2>
 
 		<div id="form">
-			<form action="http://webdevfoundations.net/scripts/formdemo.asp" method="post"> 
+			<form action="http://webdevfoundations.net/scripts/formdemo.asp" method="post" onsubmit="return validateLogin();"> 
 				<table>
 				   <tr>
 					   <td> 
@@ -74,6 +71,7 @@
 					   </td> 
 					   <td> 
 						<input type="text" name="username" id="username" onblur="checkUsername()">
+					    <span class="validation" id="valUsername"></span>
 					   </td> 
 				   </tr>
 				   <tr>
@@ -81,7 +79,8 @@
 						<label for="password">Password:</label>
 					   </td> 
 					   <td> 
-						<input type="password" name="password" id="password">
+						<input type="password" name="password" id="password" onblur="checkPW()">
+                        <span class="validation" id="valPW"></span>
 					   </td> 
 				   </tr>
 				   <tr>
@@ -93,8 +92,6 @@
 				   </tr> 
 				</table>
 			</form> 
-            <br>
-            <span id="validation"></span>
 			<br>
 			<p>New to this site?</p> 
 			<p>Please sign up <a href="signup.html">here</a>.</p>
