@@ -2,7 +2,8 @@
 #main {
     background-image: url("../img/teapot.jpg");
     background-repeat: no-repeat;
-    background-size: 100% 872px;
+    background-attachment: fixed;
+    background-size: 100% 100%;
     padding-bottom: 25px;
 }
 
@@ -10,6 +11,7 @@
 #opaque-div {
 	border: 1px solid black;
 	background-color: rgba(0, 0, 0, 0.6);
+	border-radius: 25px;
 }
 
 /* Styling for the about us text */
