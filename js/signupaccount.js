@@ -47,7 +47,7 @@ function checkFirstName() {
     var error = "";
     var valid = false; 
 
-    if (firstName == "") {
+    if (firstName == "" || !/[a-zA-Z]/.test(firstName)) {
         document.getElementById("firstname").style.backgroundColor = alertColor;
         error = "Please enter your first name.";
     } else if (/[^a-zA-Z ]/.test(firstName)) {
@@ -67,7 +67,7 @@ function checkLastName() {
     var lastName = document.getElementById("lastname").value;
     var error = "";
     var valid = false; 
-    if (lastName == "") {
+    if (lastName == "" || !/[a-zA-Z]/.test(lastName)) {
         document.getElementById("lastname").style.backgroundColor = alertColor;
         error = "Please enter your last name.";
     } else if (/[^a-zA-Z ]/.test(lastName)) {
