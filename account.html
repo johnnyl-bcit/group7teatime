@@ -6,7 +6,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Tea Time - My Account</title>
 	<link rel="stylesheet" href="style/base.css">
-	<link rel="stylesheet" href="style/account.css">
 
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
@@ -14,6 +13,20 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 	<!-- Latest compiled JavaScript -->
 	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <!-- Client-side validation JavaScript -->
+    <script src="js/signupaccount.js"></script>
+    <!-- JQuery for submit button-->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <script>
+    $(function() {
+    $( "input[type=submit]" )
+      .button()
+    });
+    </script>
+
+	<link rel="stylesheet" href="style/account.css">
 </head>
 
 <body>
@@ -51,14 +64,15 @@
 		
 		<!-- Modify Account Form -->
 		<div id="form">
-			<form action="http://webdevfoundations.net/scripts/formdemo.asp" method="post"> 
+			<form action="http://webdevfoundations.net/scripts/formdemo.asp" method="post" onsubmit="return validateSignup();"> 
 				<table>
 				   <tr>
 					   <td> 
 						<label for="email">Email:</label>
 					   </td> 
 					   <td> 
-						<input type="text" name="email">
+						<input type="text" name="email" id="email" onblur="checkEmail()">
+                        <span class="validation" id="valEmail"></span>
 					   </td> 
 				   </tr>
 				   <tr>
@@ -66,7 +80,8 @@
 						<label for="username">Username:</label>
 					   </td> 
 					   <td> 
-						<input type="text" name="username">
+						<input type="text" name="username" id="username" onblur="checkUsername()">
+                        <span class="validation" id="valUsername"></span>
 					   </td> 
 				   </tr>
 				   <tr>
@@ -74,15 +89,17 @@
 						<label for="password">Password:</label>
 					   </td> 
 					   <td> 
-						<input type="password" name="password">
+						<input type="password" name="password" id="password" onblur="checkPW()">
+                        <span class="validation" id="valPW"></span>
 					   </td> 
 				   </tr>
 				   <tr>
 					   <td> 
-						<label for="password">Confirm Password:</label>
+						<label for="confirmpw">Confirm Password:</label>
 					   </td> 
 					   <td> 
-						<input type="password" name="password">
+						<input type="password" name="confirmpw" id="confirmpw" onblur="checkPWConfirm()">
+                        <span class="validation" id="valPWConfirm"></span>
 					   </td> 
 				   </tr>
 				   <tr>
@@ -90,7 +107,8 @@
 						<label for="firstname">First Name:</label>
 					   </td> 
 					   <td> 
-						<input type="text" name="firstname">
+						<input type="text" name="firstname" id="firstname" onblur="checkFirstName()">
+                        <span class="validation" id="valFirstName"></span>
 					   </td> 
 				   </tr>
 				   <tr>
@@ -98,7 +116,8 @@
 						<label for="lastname">Last Name:</label>
 					   </td> 
 					   <td> 
-						<input type="text" name="lastname">
+						<input type="text" name="lastname" id="lastname" onblur="checkLastName()">
+                        <span class="validation" id="valLastName"></span>
 					   </td> 
 				   </tr>
 				   <tr>
@@ -106,19 +125,21 @@
 						<label for="phone">Phone Number:</label>
 					   </td> 
 					   <td> 
-						<input type="text" name="phone">
+						<input type="text" name="phone" id="phone" onblur="checkPhone()">
+                        <span class="validation" id="valPhone"></span>
 					   </td> 
 				   </tr>
 				   <tr>
 					   <td>
-						<input type="submit" value="Edit" id="submit" action="post"> 
-					   </td> 
-					   <td>
-						<input type="submit" value="Save Changes" id="submit" action="post"> 
 					   </td>
+                       <td>
+						<input type="submit" value="Save Changes" id="save"> 
+                       </td>
 				   </tr> 
+                    
 				</table>
 			</form>  
+            <br>
 		</div>
 
 		<!-- User Wishlist --> 
@@ -145,12 +166,12 @@
 			  </tr> 
 			  <tr> 
 				<td colspan="2">
-					<input type="submit" value="Edit Wish List" id="submit" action="post"> 
+					<input type="submit" value="Edit Wish List" name="editwl" id="editwl"> 
 				</td> 
 			  </tr> 
 			  <tr> 
 				<td colspan="2">
-					<input type="submit" value="Delete Wish List" id="submit" action="post"> 
+					<input type="submit" value="Delete Wish List" name="deletewl" id="deletewl"> 
 				</td> 
 			  </tr> 
 			</table> 

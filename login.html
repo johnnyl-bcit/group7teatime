@@ -6,7 +6,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Tea Time - Login</title>
 	<link rel="stylesheet" href="style/base.css">
-	<link rel="stylesheet" href="style/loginsignup.css">
 
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
@@ -14,6 +13,20 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 	<!-- Latest compiled JavaScript -->
 	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <!-- Client-side validation JavaScript -->
+    <script src="js/signupaccount.js"></script>
+    <!-- JQuery for submit button-->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <script>
+        $(function () {
+            $("input[type=submit]")
+          .button()
+        });
+    </script>
+
+	<link rel="stylesheet" href="style/loginsignup.css">
 </head>
 
 <body>
@@ -50,14 +63,15 @@
 		<h2>Log In</h2>
 
 		<div id="form">
-			<form action="http://webdevfoundations.net/scripts/formdemo.asp" method="post"> 
+			<form action="http://webdevfoundations.net/scripts/formdemo.asp" method="post" onsubmit="return validateLogin();"> 
 				<table>
 				   <tr>
 					   <td> 
 						<label for="username">Username:</label>
 					   </td> 
 					   <td> 
-						<input type="text" name="username">
+						<input type="text" name="username" id="username" onblur="checkUsername()">
+					    <span class="validation" id="valUsername"></span>
 					   </td> 
 				   </tr>
 				   <tr>
@@ -65,7 +79,8 @@
 						<label for="password">Password:</label>
 					   </td> 
 					   <td> 
-						<input type="password" name="password">
+						<input type="password" name="password" id="password" onblur="checkPW()">
+                        <span class="validation" id="valPW"></span>
 					   </td> 
 				   </tr>
 				   <tr>
@@ -77,9 +92,8 @@
 				   </tr> 
 				</table>
 			</form> 
-			<br> 
+			<br>
 			<p>New to this site?</p> 
-			<br> 
 			<p>Please sign up <a href="signup.html">here</a>.</p>
 			<br>
 			<p><a href="account.html">View the My Account page</a></p>
@@ -87,15 +101,14 @@
 	</div>
 
 	<!-- Footer Section -->
-	<footer class="footer">
-		<div class="container-fluid">
-			<ul>
-				<li><a href="aboutus.html">About Us</a></li> 
-				<li><a href="contactus.html">Contact Us</a></li>
-				<li><a href="catalogue.html">Catalogue</a></li>
-			</ul>
-		</div>
-	</footer>	
+	<div id="lowernavbar" class="container-fluid">
+		<ul>
+			<li><a href="aboutus.html">About Us</a></li> 
+			<li><a href="contactus.html">Contact Us</a></li>
+			<li><a href="catalogue.html">Catalogue</a></li>
+		</ul>
+	</div>
+	
 
 </body> 
 

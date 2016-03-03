@@ -6,7 +6,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Tea Time - Signup</title>
 	<link rel="stylesheet" href="style/base.css">
-	<link rel="stylesheet" href="style/loginsignup.css">
 
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
@@ -14,6 +13,28 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 	<!-- Latest compiled JavaScript -->
 	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <!-- Client-side validation JavaScript -->
+    <script src="js/signupaccount.js"></script>
+    <!-- JQuery for form tooltips and submit button-->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <script>
+    $(function() {
+        var tooltips = $( "[title]" ).tooltip({
+        position: {
+        my: "left top",
+        at: "right+5 top-5"
+        }
+        });
+    });
+    $(function() {
+    $( "input[type=submit]" )
+      .button()
+    });
+    </script>
+    
+	<link rel="stylesheet" href="style/loginsignup.css">
 </head>
 
 <body>
@@ -50,38 +71,44 @@
 		<h2>Signup</h2>
 
 	  	<div id="form">
-			<form action="http://webdevfoundations.net/scripts/formdemo.asp" method="post"> 
+			<form action="http://webdevfoundations.net/scripts/formdemo.asp" method="post" onsubmit="return validateSignup();"> 
 				<table>
 				   <tr>
 					   <td> 
 						<label for="email">Email:</label>
 					   </td> 
 					   <td> 
-						<input type="text" name="email">
-					   </td> 
+						<input type="text" name="email" id="email" onblur="checkEmail()" title="We will not share your email with any other parties.">
+					    <span class="validation" id="valEmail"></span>
+                       </td> 
 				   </tr>
 				   <tr>
 					   <td> 
 						<label for="username">Username:</label>
 					   </td> 
 					   <td> 
-						<input type="text" name="username">
-					   </td> 
+						<input type="text" name="username" id="username" onblur="checkUsername()" 
+                           title="Your username can contain letters, numbers, and the _ character.">
+					    <span class="validation" id="valUsername"></span>
+                       </td> 
 				   </tr>
 				   <tr>
 					   <td> 
 						<label for="password">Password:</label>
 					   </td> 
 					   <td> 
-						<input type="password" name="password">
-					   </td> 
+						<input type="password" name="password" id="password" onblur="checkPW()" 
+                           title="For a secure password, combine letters, numbers, and symbols.">
+                        <span class="validation" id="valPW"></span>
+                       </td> 
 				   </tr>
 				   <tr>
 					   <td> 
-						<label for="password">Confirm Password:</label>
+						<label for="confirmpw">Confirm Password:</label>
 					   </td> 
 					   <td> 
-						<input type="password" name="password">
+						<input type="password" name="confirmpw" id="confirmpw" onblur="checkPWConfirm()">
+                        <span class="validation" id="valPWConfirm"></span>
 					   </td> 
 				   </tr>
 				   <tr>
@@ -89,15 +116,17 @@
 						<label for="firstname">First Name:</label>
 					   </td> 
 					   <td> 
-						<input type="text" name="firstname">
-					   </td> 
+						<input type="text" name="firstname" id="firstname" onblur="checkFirstName()" title="We need your name to keep track of your orders.">
+					    <span class="validation" id="valFirstName"></span>
+                       </td> 
 				   </tr>
 				   <tr>
 					   <td> 
 						<label for="lastname">Last Name:</label>
 					   </td> 
 					   <td> 
-						<input type="text" name="lastname">
+						<input type="text" name="lastname" id="lastname" onblur="checkLastName()">
+                        <span class="validation" id="valLastName"></span>
 					   </td> 
 				   </tr>
 				   <tr>
@@ -105,35 +134,35 @@
 						<label for="phone">Phone Number:</label>
 					   </td> 
 					   <td> 
-						<input type="text" name="phone">
-					   </td> 
+						<input type="text" name="phone" id="phone" onblur="checkPhone()" title="We will only use your phone number to contact you about your orders.">
+                        <span class="validation" id="valPhone"></span>
+                       </td> 
 				   </tr>
 				   <tr>
 					   <td>
 					   </td> 
 					   <td>
-						<input type="submit" value="Create Account" id="submit" action=> 
+						<input type="submit" value="Create Account" id="create"> 
 					   </td>
 				   </tr> 
 				</table>
 			</form> 
-			<br> 
+            <br>
+			<br>
 			<p>Already have an account?</p> 
-			<br> 
 			<p>Please log in <a href="login.html">here</a>.</p> 
 	  	</div>
 	</div>
 
 	<!-- Footer Section -->
-	<footer class="footer">
-		<div class="container-fluid">
-			<ul>
-				<li><a href="aboutus.html">About Us</a></li> 
-				<li><a href="contactus.html">Contact Us</a></li>
-				<li><a href="catalogue.html">Catalogue</a></li>
-			</ul>
-		</div>
-	</footer>	
+	<div id="lowernavbar" class="container-fluid">
+		<ul>
+			<li><a href="aboutus.html">About Us</a></li> 
+			<li><a href="contactus.html">Contact Us</a></li>
+			<li><a href="catalogue.html">Catalogue</a></li>
+		</ul>
+	</div>
+	
 
 </body> 
 

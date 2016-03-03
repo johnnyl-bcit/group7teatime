@@ -24,6 +24,7 @@ textarea:focus, input:focus {
 	margin-left: 50px;
 	margin-bottom:  25px; 
 	width: 50%;
+    min-width:  500px;
 	background-color: #E7512D;
 	padding: 10px;
 	font-size: 1.2em;
@@ -31,7 +32,7 @@ textarea:focus, input:focus {
 
 #form td {
 	width: 50%;
-	padding: 10px;
+	padding: 2px;
 }
 
 #form label {
@@ -39,13 +40,17 @@ textarea:focus, input:focus {
 }
 
 #form input {
-	width: 225px;
+    width:  225px;
 	font-size: 0.8em;
 	border: 1px solid #faebd7;
 }
 
 #form p {
 	text-align: center; 
+}
+
+#validation {
+    color: white;
 }
 
 
@@ -56,6 +61,7 @@ textarea:focus, input:focus {
 	margin-left: 100px;
 	margin-bottom:  25px; 
 	width: 30%;
+    min-width:  300px;
 	height: 400px; 
 	background-color: #E7512D;
 	padding: 10px;
@@ -88,8 +94,28 @@ textarea:focus, input:focus {
 	width: 100%;
 	font-size: 0.8em;
 	border: 1px solid #faebd7;
+    color:  black;
 }
 
 #submit {
 	color: black;
+}
+
+.ui-button {
+    color:  black;
+    background:  white;
+    font-family: "Calibri", sans-serif;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.ui-button:hover {
+    color: #E7512D;
+    background:  #faebd7;
+}
+.validation {
+    font-size:  0.7em;
+    color:  white;
+    display:  block;
+    height:  1.5em;
 }
