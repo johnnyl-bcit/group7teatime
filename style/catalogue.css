@@ -4,15 +4,16 @@
 
 #main .col-sm-6 {
 	padding: 10px;
-	position: relative;
+	/*position: relative;*/
 	color: white;
 
 }
 
 #main .col-sm-6 > div {
+	position: relative;
 	background: #E7512D;
 	overflow: auto;
-
+	border-radius: 15px;
 }
 
 #main .col-sm-6 > div > h2{
@@ -28,16 +29,72 @@
 	margin: 0 10px 0px 0px;
 	
 }
-.star {
+/*.star {
 	position: absolute;
 	margin-top: 0px; 
 	top: 6px; /* checkbox has default margin-top: 4px that I can't seem to get rid of */
-	right: 10px;
-}
+	/*right: 10px;8
+}*/
 
 .more {
 	position: absolute;
-	bottom: 20px;
-	right: 20px;
-	color: white;
+	bottom: 10px;
+	right: 10px;
 }
+
+a.more:link, a.more:visited, a.more:focus {
+	color: rgb(255, 255, 255);
+	text-decoration: none;
+}
+
+a.more:hover, a.more:active {
+	color: rgb(119, 119, 119);
+}
+
+.anchor {
+	display: block;
+	height: 125px;
+	margin-top: -125px;
+	visibility: hidden;
+}
+
+input[type=checkbox].css-checkbox {
+	position:absolute; 
+	z-index: -1000;  
+	left:-1000px; 
+	overflow: hidden; 
+	clip: rect(0 0 0 0); 
+	height: 1px; 
+	width: 1px; 
+	margin: -1px; 
+	padding: 0; 
+	border: 0;
+}
+
+input[type=checkbox].css-checkbox + label.css-label {
+	position: absolute;
+	right: 0px;
+	top: 0px;
+	width: 40px;
+	height: 40px; 
+	display: inline-block;
+	background-repeat: no-repeat;
+	cursor: pointer;
+	padding-left: 5px;
+	padding-bottom: 5px;
+}
+
+input[type=checkbox].css-checkbox:checked + label.css-label {
+	background-position: 0 -40px;
+}
+
+label.css-label {
+	background-image:url(http://csscheckbox.com/checkboxes/u/csscheckbox_019807af606f0dea9eb28a8d35a7afc6.png);
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+

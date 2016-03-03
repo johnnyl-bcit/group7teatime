@@ -30,11 +30,11 @@
 				<li id="catalogue-dropdown" class="dropdown">
 					<a class="dropdown-toggle" data-toggle="dropdown" href="#">Catalogue<span class="caret"></span></a>
 		       			<ul class="dropdown-menu">
-			          		<li><a href="#black-tea">Black</a></li>
-				          	<li><a href="#green-tea">Green</a></li>
-				         	<li><a href="#oolong-tea">Oolong</a></li>
-				          	<li><a href="#white-tea">White</a></li>
-			         		<li><a href="#puerh-tea">Pu-Erh</a></li>
+			          		<li><a href="#blackTea">Black</a></li>
+				          	<li><a href="#greenTea">Green</a></li>
+				         	<li><a href="#oolongTea">Oolong</a></li>
+				          	<li><a href="#whiteTea">White</a></li>
+			         		<li><a href="#puerhTea">Pu-Erh</a></li>
 			        	</ul>
 	        	</li>
 			</ul>
@@ -50,31 +50,34 @@
 		<form action="http://webdevfoundations.net/scripts/formdemo.asp" method="post">
 
 			<!-- Black Tea -->
+			<span class="anchor" id="blackTea"></span>
 			<div id="black-tea">
 				<h1>Black</h1>
 
 				<div class="row">
 					<div class="col-sm-6">
 						<div>
-							<input class="star" type="checkbox" name="tea" value="seajuli">
+							<input class="css-checkbox" id="seajuli" type="checkbox" name="seajuli" value="seajuli">
+							<span><label for="seajuli" class="css-label"></label></span>
 							<img src="img/blacktea_1.jpg" alt="Blacktea" width="200" height="200">
 								<h2>Seajuli</h2><br>
 								<p>Strong, smooth, and malty<br>
 								Excellent with milk or not<br>
 								A fine Assam tea</p>
-							<a class="more" href="#">More...</a>
+							<a class="more" href="#">More</a>
 						</div>
 					</div>
 
 					<div class="col-sm-6">
 						<div>
-							<input class="star" type="checkbox" name="tea" value="gingia">
+							<input class="css-checkbox" id="gingia" type="checkbox" name="gingia" value="gingia">
+							<label for="gingia" class="css-label"></label>
 							<img src="img/blacktea_1.jpg" alt="Blacktea" width="200" height="200">
 								<h2>Gingia</h2><br>
 								<p>Strong, smooth, and malty<br>
 								Excellent with milk or not<br>
 								A fine Assam tea</p>
-							<a class="more" href="#">More...</a>
+							<a class="more" href="#">More</a>
 						</div>
 					</div>
 				</div>
@@ -82,25 +85,26 @@
 				<div class="row">
 					<div class="col-sm-6">
 						<div>
-							<input class="star" type="checkbox" name="tea" value="balasun">
-							<img src="img/blacktea_1.jpg" alt="Blacktea" width="200" height="200">
+							<input class="css-checkbox" id="balasun" type="checkbox" name="balasun" value="balasun">
+							<label for="balasun" class="css-label"></label>							<img src="img/blacktea_1.jpg" alt="Blacktea" width="200" height="200">
 								<h2>Balasun</h2><br>
 								<p>Strong, smooth, and malty<br>
 								Excellent with milk or not<br>
 								A fine Assam tea</p>
-							<a class="more" href="#">More...</a>
+							<a class="more" href="#">More</a>
 						</div>
 					</div>
 
 					<div class="col-sm-6">
 						<div>
-							<input class="star" type="checkbox" name="tea" value="turdah">
+							<input class="css-checkbox" id="turdah" type="checkbox" name="turdah" value="turdah">
+							<label for="turdah" class="css-label"></label>
 							<img src="img/blacktea_1.jpg" alt="Blacktea" width="200" height="200">
 								<h2>Turkdah</h2><br>
 								<p>Strong, smooth, and malty<br>
 								Excellent with milk or not<br>
 								A fine Assam tea</p>
-							<a class="more" href="#">More...</a>
+							<a class="more" href="#">More</a>
 						</div>
 					</div>
 				</div>
@@ -108,24 +112,26 @@
 				<div class="row">
 					<div class="col-sm-6">
 						<div>
-							<input class="star" type="checkbox" name="tea" value="limbini">
+							<input class="css-checkbox" id="limbini" type="checkbox" name="limbini" value="limbini">
+							<label for="limbini" class="css-label"></label>
 							<img src="img/blacktea_1.jpg" alt="Blacktea" width="200" height="200">
 								<h2>Limbini</h2><br>
 								<p>Strong, smooth, and malty<br>
 								Excellent with milk or not<br>
 								A fine Assam tea</p>
-							<a class="more" href="#">More...</a>
+							<a class="more" href="#">More</a>
 						</div>
 					</div>
 					<div class="col-sm-6">
 						<div>
-							<input class="star" type="checkbox" name="tea" value="kenilworth">
+							<input class="css-checkbox" id="kenilworth" type="checkbox" name="kenilworth" value="kenilworth">
+							<label for="kenilworth" class="css-label"></label>
 							<img src="img/blacktea_1.jpg" alt="Blacktea" width="200" height="200">
 								<h2>Kenilworth</h2><br>
 								<p>Strong, smooth, and malty<br>
 								Excellent with milk or not<br>
 								A fine Assam tea</p>
-							<a class="more" href="#">More...</a>
+							<a class="more" href="#">More</a>
 						</div>
 					</div>
 				</div>
@@ -133,134 +139,148 @@
 				<div class="row">
 					<div class="col-sm-6">
 						<div>
-							<input class="star" type="checkbox" name="tea" value="yingming">
+							<input class="css-checkbox" id="yingming" type="checkbox" name="yingming" value="yingming">
+							<label for="yingming" class="css-label"></label>
 							<img src="img/blacktea_1.jpg" alt="Blacktea" width="200" height="200">
 								<h2>Ying Ming</h2><br>
 								<p>Strong, smooth, and malty<br>
 								Excellent with milk or not<br>
 								A fine Assam tea</p>
-							<a class="more" href="#">More...</a>
+							<a class="more" href="#">More</a>
 						</div>
 					</div>
 
 					<div class="col-sm-6">
 						<div>
-							<input class="star" type="checkbox" name="tea" value="keemunpanda">
+							<input class="css-checkbox" id="keemun" type="checkbox" name="keemun" value="keemunpanda">
+							<label for="keemun" class="css-label"></label>
 							<img src="img/blacktea_1.jpg" alt="Blacktea" width="200" height="200">
-								<h2>Keemun Panda #1</h2><br>
+								<h2>Keemun Panda</h2><br>
 								<p>Strong, smooth, and malty<br>
 								Excellent with milk or not<br>
 								A fine Assam tea</p>
-							<a class="more" href="#">More...</a>
+							<a class="more" href="#">More</a>
 						</div>
 					</div>
 				</div>
 			</div>
 
 			<!-- Green Tea -->
+			<span class="anchor" id="greenTea"></span>
 			<div id="green-tea" class="row">
 				<h1>Green</h1>
 					<div class="col-sm-6">
 						<div>
-							<input class="star" type="checkbox" name="tea" value="sencha-chiran">
+							<input class="css-checkbox" id="sencha" type="checkbox" name="sencha-chiran" value="sencha-chiran">
+							<label for="sencha" class="css-label"></label>
 							<img src="img/blacktea_1.jpg" alt="Greentea" width="200" height="200">
 								<h2>Sencha Chiran</h2><br>
 								<p>Strong, smooth, and malty<br>
 								Excellent with milk or not<br>
 								A fine Assam tea</p>
-							<a class="more" href="#">More...</a>
+							<a class="more" href="#">More</a>
 						</div>
 					</div>
 					<div class="col-sm-6">
 						<div>
-							<input class="star" type="checkbox" name="tea" value="gyokuro-yame">
+							<input class="css-checkbox" id="gyokuro" type="checkbox" name="gyokuro-yame" value="gyokuro-yame">
+							<label for="gyokuro" class="css-label"></label>
 							<img src="img/blacktea_1.jpg" alt="Greentea" width="200" height="200">
 								<h2>Gyokuro Yame</h2><br>
 								<p>Strong, smooth, and malty<br>
 								Excellent with milk or not<br>
 								A fine Assam tea</p>
-							<a class="more" href="#">More...</a>
+							<a class="more" href="#">More</a>
 						</div>
 					</div>	
 			</div>
 
 			<!-- Oolong Tea -->
+			<span class="anchor" id="oolongTea"></span>
 			<div id="oolong-tea" class="row">
 				<h1>Oolong</h1>
 				<div class="col-sm-6">
 					<div>
-						<input class="star" type="checkbox" name="tea" value="ti-guanyin">
+						<input class="css-checkbox" id="tiguanyin" type="checkbox" name="ti-guanyin" value="ti-guanyin">
+							<label for="tiguanyin" class="css-label"></label>
 						<img src="img/blacktea_1.jpg" alt="Oolongtea" width="200" height="200">
 							<h2>Ti Guanyin</h2><br>
 							<p>Strong, smooth, and malty<br>
 							Excellent with milk or not<br>
 							A fine Assam tea</p>
-						<a class="more" href="#">More...</a>
+						<a class="more" href="#">More</a>
 					</div>
 				</div>
 				<div class="col-sm-6">
 					<div>
-						<input class="star" type="checkbox" name="tea" value="milk-oolong">
+						<input class="css-checkbox" id="milkoolong" type="checkbox" name="milk-oolong" value="milk-oolong">
+							<label for="milkoolong" class="css-label"></label>
 						<img src="img/blacktea_1.jpg" alt="Oolongtea" width="200" height="200">
 							<h2>Milk Oolong</h2><br>
 							<p>Strong, smooth, and malty<br>
 							Excellent with milk or not<br>
 							A fine Assam tea</p>
-						<a class="more" href="#">More...</a>
+						<a class="more" href="#">More</a>
 					</div>
 				</div>	
 			</div>
 
 			<!-- White Tea -->
+			<span class="anchor" id="whiteTea"></span>
 			<div id="white-tea" class="row">
 				<h1>White</h1>
 				<div class="col-sm-6">
 					<div>
-						<input class="star" type="checkbox" name="tea" value="baihao-yinzhen">
+						<input class="css-checkbox" id="baihao" type="checkbox" name="baihao-yinzhen" value="baihao-yinzhen">
+							<label for="baihao" class="css-label"></label>
 						<img src="img/blacktea_1.jpg" alt="Whitetea" width="200" height="200">
 							<h2>Baihao Yinzhen</h2><br>
 							<p>Strong, smooth, and malty<br>
 							Excellent with milk or not<br>
 							A fine Assam tea</p>
-						<a class="more" href="#">More...</a>
+						<a class="more" href="#">More</a>
 					</div>
 				</div>
 				<div class="col-sm-6">
 					<div>
-						<input class="star" type="checkbox" name="tea" value="guaranse">
+						<input class="css-checkbox" id="guaranse" type="checkbox" name="guaranse" value="guaranse">
+							<label for="guaranse" class="css-label"></label>
 						<img src="img/blacktea_1.jpg" alt="Whitetea" width="200" height="200">
 							<h2>Guaranse</h2><br>
 							<p>Strong, smooth, and malty<br>
 							Excellent with milk or not<br>
 							A fine Assam tea</p>
-						<a class="more" href="#">More...</a>
+						<a class="more" href="#">More</a>
 					</div>
 				</div>	
 			</div>
 
 			<!-- Pu-Erh Tea -->
+			<span class="anchor" id="puerhTea"></span>
 			<div id="puerh-tea" class="row">
 				<h1>Pu-erh</h1>
 				<div class="col-sm-6">
 					<div>
-						<input class="star" type="checkbox" name="tea" value="young-puerh">
-						<img src="img/blacktea_1.jpg" alt="Pu-Eahtea" width="200" height="200">
+						<input class="css-checkbox" id="youngpuerh" type="checkbox" name="young-puerh" value="young-puerh">
+							<label for="youngpuerh" class="css-label"></label>
+						<img src="img/blacktea_1.jpg" alt="Pu-Erhtea" width="200" height="200">
 							<h2>Young Pu-erh</h2><br>
 							<p>Strong, smooth, and malty<br>
 							Excellent with milk or not<br>
 							A fine Assam tea</p>
-						<a class="more" href="#">More...</a>
+						<a class="more" href="#">More</a>
 					</div>
 				</div>
 				<div class="col-sm-6">
 					<div>
-						<input class="star" type="checkbox" name="tea" value="golden-puerh">
+						<input class="css-checkbox" id="goldenpuerh" type="checkbox" name="golden-puerh" value="golden-puerh">
+							<label for="goldenpuerh" class="css-label"></label>
 						<img src="img/blacktea_1.jpg" alt="Pu-Eahtea" width="200" height="200">
 							<h2>Golden Pu-erh</h2><br>
 							<p>Strong, smooth, and malty<br>
 							Excellent with milk or not<br>
 							A fine Assam tea</p>
-						<a class="more" href="#">More...</a>
+						<a class="more" href="#">More</a>
 					</div>
 				</div>	
 			</div>
