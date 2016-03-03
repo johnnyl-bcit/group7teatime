@@ -9,7 +9,7 @@ function checkEmail() {
     if (email == "") {
         document.getElementById("email").style.backgroundColor = alertColor;
         error = "Please enter your email address.";
-    } else if (!email.match(/[0-9a-zA-Z.-_]+[@][0-9a-zA-Z]+[.][a-zA-Z]+/)) {
+    } else if (!email.match(/^[0-9a-zA-Z.-_]+[@][0-9a-zA-Z]+[.][a-zA-Z.]{2,}$/)) {
         document.getElementById("email").style.backgroundColor = alertColor;
         error = "You have not entered a valid email.";
     } else {
@@ -66,7 +66,7 @@ function checkFirstName() {
 function checkLastName() {
     var lastName = document.getElementById("lastname").value;
     var error = "";
-
+    var valid = false; 
     if (lastName == "") {
         document.getElementById("lastname").style.backgroundColor = alertColor;
         error = "Please enter your last name.";
@@ -91,6 +91,9 @@ function checkPW() {
             document.getElementById("confirmpw").style.backgroundColor = alertColor;
         }
         error = "Please enter a password.";
+    } else if (document.getElementById("password").value.length < 8 || document.getElementById("password").value.length > 16) {
+        document.getElementById("password").style.backgroundColor = alertColor;
+        error = "Passwords must be 8-16 characters.";
     } else {
         valid = true; 
     }
@@ -108,6 +111,9 @@ function checkPWConfirm() {
         document.getElementById("password").style.backgroundColor = alertColor;
         document.getElementById("confirmpw").style.backgroundColor = alertColor;
         error = "Your passwords do not match.";
+    } else if (!checkPW()) {
+        document.getElementById("confirmpw").style.backgroundColor = alertColor;
+        error = "";
     } else {
         document.getElementById("password").style.backgroundColor = regColor;
         document.getElementById("confirmpw").style.backgroundColor = regColor;
@@ -120,11 +126,11 @@ function checkPWConfirm() {
 function checkPhone() {
     var phone = document.getElementById("phone").value;
     var error = "";
-    var valid = false; 
+    var valid = false;
     if (phone == "") {
         document.getElementById("phone").style.backgroundColor = alertColor;
         error = "Please enter your phone number.";
-    } else if (!phone.match(/[+]?[1]?[-.\s]?[0-9]{3}[-.\s]?[0-9]{3}[-.\s]?[0-9]{4}/)) {
+    } else if (!phone.match(/^[+]?[1]?[-.\s]?[0-9]{3}[-.\s]?[0-9]{3}[-.\s]?[0-9]{4}$/)) {
         document.getElementById("phone").style.backgroundColor = alertColor;
         error = "This is not a valid phone number.";
     } else {
@@ -136,21 +142,23 @@ function checkPhone() {
 }
 
 function validateSignup() {
-    var valid = false;
-    if (checkEmail() && checkUsername() && checkPW() && checkPWConfirm() && checkPhone() && checkFirstName() && checkLastName())
-    {
-       valid = true;
-    }
+    var valid = true; 
+    if (!checkEmail()) { valid = false; }
+    if (!checkUsername()) { valid = false; }
+    if (!checkPW()) { valid = false; }
+    if (!checkPWConfirm()) { valid = false; }
+    if (!checkFirstName()) { valid = false; }
+    if (!checkLastName()) { valid = false; }
+    if (!checkPhone()) { valid = false; }
+
     return valid;
         
 }
 
 function validateLogin() {
     var valid = false;
-    if (checkUsername() && checkPW()) {
-        valid = true;
-    }
-    alert(valid);
+    if (!checkUsername()) { valid = false; }
+    if (!checkPW()) { valid = false; }
 
     return valid;
 }
