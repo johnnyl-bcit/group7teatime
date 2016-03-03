@@ -30,30 +30,43 @@
 </head>
 
 <body>
-	<!-- Header Section & Nav Bar -->
+	<!-- Banner -->
 	<a href="index.html"><div id="banner" class="container-fluid">
 		<img src="img/banner.png" alt="Banner Image">
 	</div></a>
 
+	<!-- Nav Bar -->
 	<nav class="navbar navbar-default navbar-fixed-top">
-		<div id="topnav" class="container-fluid">
-	  		<ul class="nav navbar-nav">
-				<li><a href="aboutus.html">About Us</a></li> 
-				<li><a href="contactus.html">Contact Us</a></li>
-				<li id="catalogue-dropdown" class="dropdown">
-					<a class="dropdown-toggle" data-toggle="dropdown" href="#">Catalogue<span class="caret"></span></a>
-		       			<ul class="dropdown-menu">
-			          		<li><a href="catalogue.html#black-tea">Black</a></li>
-				          	<li><a href="catalogue.html#green-tea">Green</a></li>
-				         	<li><a href="catalogue.html#oolong-tea">Oolong</a></li>
-				          	<li><a href="catalogue.html#white-tea">White</a></li>
-			         		<li><a href="catalogue.html#puerh-tea">Pu-Erh</a></li>
-			        	</ul>
-	        	</li>
-			</ul>
-			<ul class="nav navbar-nav navbar-right">
-				<li><a href="login.html">Log In/Sign Up</a></li>
-		  	</ul>
+		<div class="container-fluid">
+			<!-- Button for collapsing nav bar -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span> 
+			        <span class="icon-bar"></span>
+			  	</button>
+		  		<a href="#"><img class="center-block" src="img/bannersmall.png" alt="Nav Bar Logo"></a>
+	  		</div>
+
+			<div class="collapse navbar-collapse" id="myNavbar">
+		  		<ul class="nav navbar-nav">
+					<li><a href="aboutus.html">About Us</a></li> 
+					<li><a href="contactus.html">Contact Us</a></li>
+					<li id="catalogue-dropdown" class="dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#">Catalogue<span class="caret"></span></a>
+			       			<ul class="dropdown-menu">
+				          		<li><a href="catalogue.html#blackTea">Black</a></li>
+					          	<li><a href="catalogue.html#greenTea">Green</a></li>
+					         	<li><a href="catalogue.html#oolongTea">Oolong</a></li>
+					          	<li><a href="catalogue.html#whiteTea">White</a></li>
+				         		<li><a href="catalogue.html#puerhTea">Pu-Erh</a></li>
+				        	</ul>
+		        	</li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="login.html">Log In/Sign Up</a></li>
+		  		</ul>
+	  		</div>
   		</div> 
 	</nav>
 
@@ -101,14 +114,15 @@
 	</div>
 
 	<!-- Footer Section -->
-	<div id="lowernavbar" class="container-fluid">
-		<ul>
-			<li><a href="aboutus.html">About Us</a></li> 
-			<li><a href="contactus.html">Contact Us</a></li>
-			<li><a href="catalogue.html">Catalogue</a></li>
-		</ul>
-	</div>
-	
+	<footer class="footer">
+		<div class="container-fluid">
+			<ul>
+				<li><a href="aboutus.html">About Us</a></li> 
+				<li><a href="contactus.html">Contact Us</a></li>
+				<li><a href="catalogue.html">Catalogue</a></li>
+			</ul>
+		</div>
+	</footer>	
 
 </body> 
 

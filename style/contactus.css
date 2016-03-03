@@ -25,4 +25,19 @@
 
 #map > div {
 	margin: auto;
+	overflow:hidden;
+	height:450px;
+	width:450px;
+}
+
+#gmap_canvas img {
+	max-width:none!important;
+	background:none!important
+}
+
+/* Code for responsive design; hide banner, shift navbar and content to top */
+@media only screen and (max-width: 765px) {
+	#map {
+	border-left: none;
+	}
 }
