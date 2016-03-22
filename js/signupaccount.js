@@ -95,6 +95,7 @@ function checkPW() {
         document.getElementById("password").style.backgroundColor = alertColor;
         error = "Passwords must be 8-16 characters.";
     } else {
+        document.getElementById("password").style.backgroundColor = regColor;
         valid = true; 
     }
     
@@ -156,9 +157,8 @@ function validateSignup() {
 }
 
 function validateLogin() {
-    var valid = false;
+    var valid = true;
     if (!checkUsername()) { valid = false; }
     if (!checkPW()) { valid = false; }
-
     return valid;
 }

@@ -1,6 +1,4 @@
 <?php
-$username = $_POST["username"];
-$password = $_POST["password"];
 
 $servername = "mysql4.000webhost.com";
 $username = "a3229231_teatime";
@@ -13,8 +11,12 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 // Check connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
-} 
-$sql = "SELECT ID FROM MyUsers WHERE Username=" . $username . " AND Password=" . $password . " ORDER BY ID DESC";
+}
+
+ 
+$user = $_POST["username"];
+$pw = $_POST["password"];
+$sql = "SELECT ID FROM MyUsers WHERE Username='" . $user . "' AND Password='" . $pw . "' ORDER BY ID DESC";
 
 $result=$conn->query($sql);
 $id = 0;
