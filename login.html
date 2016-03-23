@@ -62,9 +62,14 @@
 		        	</li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
-					<li id="menulogin"><a href="login.html">Log In/Sign Up</a></li>
-					<li id="menuaccount"><a href="account.html">My Account</a></li>
-					<li id="menulogout"><a href=#>Log out</a></li>
+                    <?php
+                        if(isset($_COOKIE["userid"]) && isset($_COOKIE["username"])) {
+                            echo "<li id='menuaccount'><a href='account.html'>Account: " . $_COOKIE["username"] . "</a></li>";
+                            echo "<li id='menulogout'><a href='logout.php'>Log out</a></li>";
+                        } else {
+                            echo "<li id='menulogin'><a href='login.html'>Log In/Sign Up</a></li>"; 
+                        }  
+                    ?>
 		  		</ul>
 	  		</div>
   		</div> 
@@ -109,8 +114,6 @@
 			<br>
 			<p>New to this site?</p> 
 			<p>Please sign up <a href="signup.html">here</a>.</p>
-			<br>
-			<p><a href="account.html">View the My Account page</a></p>
 		</div>
 	</div>
 

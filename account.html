@@ -103,9 +103,14 @@
 		        	</li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
-					<li><a href="login.html">Log In/Sign Up</a></li>
-					<li><a href="account.html">My Account</a></li>
-					<li><a href=#>Log out</a></li>
+					 <?php
+                        if(isset($_COOKIE["userid"]) && isset($_COOKIE["username"])) {
+                            echo "<li id='menuaccount'><a href='account.html'>Account: " . $_COOKIE["username"] . "</a></li>";
+                            echo "<li id='menulogout'><a href='logout.php'>Log out</a></li>";
+                        } else {
+                            echo "<li id='menulogin'><a href='login.html'>Log In/Sign Up</a></li>"; 
+                        }  
+                    ?>
 		  		</ul>
 	  		</div>
   		</div> 
