@@ -24,7 +24,6 @@
           .button()
         });
     </script>
-
 	<link rel="stylesheet" href="style/loginsignup.css">
 </head>
 
@@ -63,9 +62,9 @@
 		        	</li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
-					<li><a href="login.html">Log In/Sign Up</a></li>
-					<li><a href="account.html">My Account</a></li>
-					<li><a href=#>Log out</a></li>
+					<li id="menulogin"><a href="login.html">Log In/Sign Up</a></li>
+					<li id="menuaccount"><a href="account.html">My Account</a></li>
+					<li id="menulogout"><a href=#>Log out</a></li>
 		  		</ul>
 	  		</div>
   		</div> 
@@ -102,6 +101,7 @@
 					   </td> 
 					   <td>
 						<input type="submit" value="Log In" id="submit"> 
+                        <span class="validation" id="valLogin"></span>
 					   </td>
 				   </tr> 
 				</table>
@@ -128,3 +128,14 @@
 </body> 
 
 </html>  
+
+ <script type="text/javascript">
+        var myURL = window.location.href;
+
+        if (myURL.indexOf('?') > 0 && myURL.endsWith("?invalid=true")) {
+            document.getElementById("valLogin").innerHTML = "Invalid username or password.";
+        } else {
+            document.getElementById("valLogin").innerHTML = "";
+        }
+
+ </script> 

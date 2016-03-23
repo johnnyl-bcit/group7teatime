@@ -28,13 +28,14 @@ if ($result->num_rows > 0) {
 }
 
 if ($id > 0) {
-    echo '<script type="text/javascript">
-           window.location = "account.html"
-      </script>';
+    echo "<script type='text/javascript'>
+           document.cookie='id=" . $id . "username=" . $user . "';
+           window.location = 'index.html';
+      </script>";
 } else {
-    echo '<script type="text/javascript">
-           window.location = "login.html"
-      </script>';
+    echo "<script type='text/javascript'>
+           window.location = 'login.html?invalid=true';
+      </script>";
 }
 
 $conn->close();
@@ -43,7 +44,7 @@ $conn->close();
 <!DOCTYPE html>
 <html lang="en">
     <head>
-	    <link rel="stylesheet" href="style/base.css">
+	    <link rel="stylesheet" href="style/validation.css">
         <meta charset="utf-8" />
         <title>Tea Time: Logging in...</title>
     </head>
