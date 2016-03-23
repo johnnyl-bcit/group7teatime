@@ -85,7 +85,7 @@
 		<h2>Signup</h2>
 
 	  	<div id="form">
-			<form action="http://webdevfoundations.net/scripts/formdemo.asp" method="post" onsubmit="return validateSignup();"> 
+			<form action="signup.php" method="post" onsubmit="return validateSignup();"> 
 				<table>
 				   <tr>
 					   <td> 
@@ -157,6 +157,7 @@
 					   </td> 
 					   <td>
 						<input type="submit" value="Create Account" id="create"> 
+                        <span class="validation" id="valCreate"></span>
 					   </td>
 				   </tr> 
 				</table>
@@ -181,4 +182,14 @@
 
 </body> 
 
-</html>  
+</html>
+ <script type="text/javascript">
+        var myURL = window.location.href;
+
+        if (myURL.indexOf('?') > 0 && myURL.endsWith("?exists=true")) {
+            document.getElementById("valCreate").innerHTML = "The username you selected already exists.";
+        } else {
+            document.getElementById("valCreate").innerHTML = "";
+        }
+
+ </script>   

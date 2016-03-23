@@ -4,7 +4,7 @@
     <head>
 	    <link rel="stylesheet" href="style/validation.css">
         <meta charset="utf-8" />
-        <title>Tea Time: Logging in...</title>
+        <title>Tea Time: Creating account...</title>
     </head>
     <body>
     </body>
@@ -28,32 +28,39 @@ if ($conn->connect_error) {
  
 $user = $_POST["username"];
 $pw = $_POST["password"];
-$sql = "SELECT ID FROM MyUsers WHERE Username='" . $user . "' AND Password='" . $pw . "' ORDER BY ID DESC";
+$email = $_POST["email"];
+$firstname = $_POST["firstname"];
+$lastname = $_POST["lastname"];
+$phonenumber = $_POST["phone"];
+
+
+$sql = "SELECT ID FROM MyUsers WHERE Username='" . $user . "'";
 
 $result=$conn->query($sql);
-$id = 0;
+$existingid = 0;
 if ($result->num_rows > 0) {
     // output data of each row
     while($row = $result->fetch_assoc()) {
-		$id = $row['ID'];
+		$existingid = $row['ID'];
     }
 }
 
-if ($id > 0) {
-$cookie_name = "username";
-$cookie_value = $user;
-setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/");
-
-$cookie_name2 = "userid";
-$cookie_value2 = $id;
-setcookie($cookie_name2, $cookie_value2, time() + (86400 * 30), "/");
+if ($existingid > 0) {
     echo "<script type='text/javascript'>
-           window.location = 'index.html';
+           window.location = 'signup.html?exists=true';
       </script>";
 } else {
+   $sql = "INSERT INTO MyUsers(Username, Password, Email, FirstName, LastName, PhoneNumber";
+   $sql .= ")VALUES(";
+   $sql .= "'" . $user . "', '" . $pw . "', '" . $email . "', '" . $firstname; 
+   $sql .= "', '" . $lastname . "', '" . $phonenumber . "')";
+   
+
+   if ($conn->query($sql) === TRUE) {
     echo "<script type='text/javascript'>
-           window.location = 'login.html?invalid=true';
+           window.location = 'login.html?signup=true';
       </script>";
+   }
 }
 
 $conn->close();

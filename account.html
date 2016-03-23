@@ -29,6 +29,46 @@
 </head>
 
 <body>
+    
+    <?php
+    $user = "";
+    $email = "";
+    $firstname = "";
+    $lastname = "";
+    $phonenumber = "";
+    
+    if(isset($_COOKIE["username"])) {
+        $user = $_COOKIE["username"];
+    }
+    if(isset($_COOKIE["userid"])) {
+        $id = $_COOKIE["userid"];
+
+        $sql = "SELECT Email, FirstName, LastName, PhoneNumber FROM MyUsers WHERE ID=" . $id;
+
+        $servername = "mysql4.000webhost.com";
+        $username = "a3229231_teatime";
+        $password = "Comp1536teatime";
+        $dbname = "a3229231_teatime";
+    
+        $conn = new mysqli($servername, $username, $password, $dbname);
+    
+        if ($conn->connect_error) {
+            die("Connection failed: " . $conn->connect_error);
+        }
+
+        $result=$conn->query($sql);
+        if ($result->num_rows > 0) {
+            while($row = $result->fetch_assoc()) {
+		        $email = $row['Email'];
+		        $firstname = $row['FirstName'];
+		        $lastname = $row['LastName'];
+		        $phonenumber = $row['PhoneNumber'];
+            }
+        }
+    
+        $conn->close();
+    }
+    ?>
 	<!-- Banner -->
 	<a href="index.html"><div id="banner" class="container-fluid">
 		<img src="img/banner.png" alt="Banner Image">
@@ -78,14 +118,14 @@
 		
 		<!-- Modify Account Form -->
 		<div id="form">
-			<form action="http://webdevfoundations.net/scripts/formdemo.asp" method="post" onsubmit="return validateSignup();"> 
+			<form action="modify.php" method="post" onsubmit="return validateSignup();"> 
 				<table>
 				   <tr>
 					   <td> 
 						<label for="email">Email:</label>
 					   </td> 
 					   <td> 
-						<input type="text" name="email" id="email" onblur="checkEmail()">
+						<input type="text" name="email" id="email" onblur="checkEmail()" value="<?php echo $email;?>">
                         <span class="validation" id="valEmail"></span>
 					   </td> 
 				   </tr>
@@ -94,7 +134,7 @@
 						<label for="username">Username:</label>
 					   </td> 
 					   <td> 
-						<input type="text" name="username" id="username" onblur="checkUsername()">
+						<input type="text" name="username" id="username" onblur="checkUsername()" value="<?php echo $user;?>">
                         <span class="validation" id="valUsername"></span>
 					   </td> 
 				   </tr>
@@ -121,7 +161,7 @@
 						<label for="firstname">First Name:</label>
 					   </td> 
 					   <td> 
-						<input type="text" name="firstname" id="firstname" onblur="checkFirstName()">
+						<input type="text" name="firstname" id="firstname" onblur="checkFirstName()" value="<?php echo $firstname;?>">
                         <span class="validation" id="valFirstName"></span>
 					   </td> 
 				   </tr>
@@ -130,7 +170,7 @@
 						<label for="lastname">Last Name:</label>
 					   </td> 
 					   <td> 
-						<input type="text" name="lastname" id="lastname" onblur="checkLastName()">
+						<input type="text" name="lastname" id="lastname" onblur="checkLastName()" value="<?php echo $lastname;?>">
                         <span class="validation" id="valLastName"></span>
 					   </td> 
 				   </tr>
@@ -139,7 +179,7 @@
 						<label for="phone">Phone Number:</label>
 					   </td> 
 					   <td> 
-						<input type="text" name="phone" id="phone" onblur="checkPhone()">
+						<input type="text" name="phone" id="phone" onblur="checkPhone()" value="<?php echo $phonenumber;?>">
                         <span class="validation" id="valPhone"></span>
 					   </td> 
 				   </tr>
@@ -148,6 +188,7 @@
 					   </td>
                        <td>
 						<input type="submit" value="Save Changes" id="save"> 
+                        <span class="validation" id="valModify"></span>
                        </td>
 				   </tr> 
                     
@@ -204,5 +245,19 @@
 	</footer>	
 
 </body> 
-
+ 
 </html>  
+
+
+<script type="text/javascript">
+        var myURL = window.location.href;
+
+        if (myURL.indexOf('?') > 0 && myURL.endsWith("?exists=true")) {
+            document.getElementById("valCreate").innerHTML = "The username you selected already exists.";
+        } else if (myURL.indexOf('?') > 0 && myURL.endsWith("?success=true")) {
+            document.getElementById("valCreate").innerHTML = "Account modified successfully.";
+        } else {
+            document.getElementById("valCreate").innerHTML = "";
+        }
+
+</script>   
