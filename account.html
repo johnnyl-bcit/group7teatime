@@ -65,6 +65,25 @@
 		        $phonenumber = $row['PhoneNumber'];
             }
         }
+
+        $teatypes = array();
+        $teanames = array(); 
+
+        $sql = "SELECT TeaTypes.Type AS TEA_TYPE, Teas.TeaName AS TEA_NAME FROM Favourites";
+        $sql .= " INNER JOIN Teas ON Teas.ID = Favourites.TeaID";
+        $sql .= " INNER JOIN TeaTypes ON TeaTypes.ID = Teas.Type";
+        $sql .= " WHERE Favourites.UserID=" . $id;
+    
+        $index = 0; 
+        $result=$conn->query($sql);
+        if ($result->num_rows > 0) {
+            while($row = $result->fetch_assoc()) {
+                $teatypes[$index] =  $row['TEA_TYPE'];
+                $teanames[$index] =  $row['TEA_NAME'];
+                $index++;
+            }
+        }
+
     
         $conn->close();
     }
@@ -208,22 +227,11 @@
 
 			<!-- Table of Wishlist Items--> 
 			<table>
-			  <tr>
-			    <td>Oolong</td>
-			    <td>Ti Guanyin</td>
-			  </tr> 
-			  <tr> 
-				<td>White</td>
-				<td>Guaranse</td> 
-			  </tr> 
-			  <tr> 
-				<td>Assam</td>
-				<td>Seajuli</td> 
-			  </tr> 
-			  <tr> 
-				<td>Darjeeling</td>
-				<td>Balasun</td> 
-			  </tr> 
+              <?php
+                for($x = 0; $x < count($teatypes); $x++) {
+                    echo "<tr><td>" . $teatypes[$x] . "</td><td>" . $teanames[$x] . "</td></tr>";
+                 }
+               ?>
 			  <tr> 
 				<td colspan="2">
 					<input type="submit" value="Edit Wish List" name="editwl" id="editwl"> 
