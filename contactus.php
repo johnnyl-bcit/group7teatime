@@ -37,26 +37,26 @@
 
 			<div class="collapse navbar-collapse" id="myNavbar">
 		  		<ul class="nav navbar-nav">
-					<li><a href="aboutus.html">About Us</a></li> 
-					<li><a href="contactus.html">Contact Us</a></li>
+					<li><a href="aboutus.php">About Us</a></li> 
+					<li><a href="contactus.php">Contact Us</a></li>
 					<li id="catalogue-dropdown" class="dropdown">
 						<a class="dropdown-toggle" data-toggle="dropdown" href="#">Catalogue<span class="caret"></span></a>
 			       			<ul class="dropdown-menu">
-				          		<li><a href="catalogue.html#blackTea">Black</a></li>
-					          	<li><a href="catalogue.html#greenTea">Green</a></li>
-					         	<li><a href="catalogue.html#oolongTea">Oolong</a></li>
-					          	<li><a href="catalogue.html#whiteTea">White</a></li>
-				         		<li><a href="catalogue.html#puerhTea">Pu-Erh</a></li>
+				          		<li><a href="catalogue.php#blackTea">Black</a></li>
+					          	<li><a href="catalogue.php#greenTea">Green</a></li>
+					         	<li><a href="catalogue.php#oolongTea">Oolong</a></li>
+					          	<li><a href="catalogue.php#whiteTea">White</a></li>
+				         		<li><a href="catalogue.php#puerhTea">Pu-Erh</a></li>
 				        	</ul>
 		        	</li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
 					 <?php
                         if(isset($_COOKIE["userid"]) && isset($_COOKIE["username"])) {
-                            echo "<li id='menuaccount'><a href='account.html'>Account: " . $_COOKIE["username"] . "</a></li>";
+                            echo "<li id='menuaccount'><a href='account.php'>Account: " . $_COOKIE["username"] . "</a></li>";
                             echo "<li id='menulogout'><a href='logout.php'>Log out</a></li>";
                         } else {
-                            echo "<li id='menulogin'><a href='login.html'>Log In/Sign Up</a></li>"; 
+                            echo "<li id='menulogin'><a href='login.php'>Log In/Sign Up</a></li>"; 
                         }  
                     ?>
 		  		</ul>
@@ -101,9 +101,9 @@
 	<footer class="footer">
 		<div class="container-fluid">
 			<ul>
-				<li><a href="aboutus.html">About Us</a></li> 
-				<li><a href="contactus.html">Contact Us</a></li>
-				<li><a href="catalogue.html">Catalogue</a></li>
+				<li><a href="aboutus.php">About Us</a></li> 
+				<li><a href="contactus.php">Contact Us</a></li>
+				<li><a href="catalogue.php">Catalogue</a></li>
 			</ul>
 		</div>
 	</footer>	
