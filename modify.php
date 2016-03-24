@@ -51,7 +51,7 @@ if ($result->num_rows > 0) {
 
 if ($existingid > 0) {
     echo "<script type='text/javascript'>
-           window.location = 'account.html?exists=true';
+           window.location = 'account.php?exists=true';
       </script>";
 } else {
    $sql = "UPDATE MyUsers SET";
@@ -65,7 +65,7 @@ if ($existingid > 0) {
 
    if ($conn->query($sql) === TRUE) {
     echo "<script type='text/javascript'>
-           window.location = 'account.html?success=true';
+           window.location = 'account.php?success=true';
       </script>";
    }
 }
@@ -73,7 +73,7 @@ if ($existingid > 0) {
 $conn->close();
 } else {
     echo "<script type='text/javascript'>
-           window.location = 'login.html';
+           window.location = 'login.php';
       </script>";
 }
 ?>

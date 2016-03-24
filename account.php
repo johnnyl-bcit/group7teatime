@@ -228,21 +228,25 @@
 			<!-- Table of Wishlist Items--> 
 			<table>
               <?php
-                for($x = 0; $x < count($teatypes); $x++) {
-                    echo "<tr><td>" . $teatypes[$x] . "</td><td>" . $teanames[$x] . "</td></tr>";
-                 }
+                $max = count($teatypes);
+                if ($max > 7) {$max = 7;}
+                for($x = 0; $x < $max; $x++) {
+                        echo "<tr><td>" . $teatypes[$x] . "</td><td>" . $teanames[$x] . "</td></tr>";
+                }
+                   
                ?>
 			  <tr> 
 				<td colspan="2">
-					<input type="submit" value="Edit Wish List" name="editwl" id="editwl"> 
+					<input type="submit" value="Edit Wish List" name="editwl" id="editwl" onclick="editWishlist()"> 
 				</td> 
 			  </tr> 
 			  <tr> 
 				<td colspan="2">
-					<input type="submit" value="Delete Wish List" name="deletewl" id="deletewl"> 
+					<input type="submit" value="Delete Wish List" name="deletewl" id="deletewl" onclick="deleteWishlist()"> 
 				</td> 
 			  </tr> 
 			</table> 
+            <span class="validation" id="valWishlist"></span>
 		</div>
 	</div>
 
@@ -264,13 +268,20 @@
 
 <script type="text/javascript">
         var myURL = window.location.href;
+        
 
         if (myURL.indexOf('?') > 0 && myURL.endsWith("?exists=true")) {
             document.getElementById("valCreate").innerHTML = "The username you selected already exists.";
+            document.getElementById("valWishlist").innerHTML = "";
         } else if (myURL.indexOf('?') > 0 && myURL.endsWith("?success=true")) {
             document.getElementById("valCreate").innerHTML = "Account modified successfully.";
+            document.getElementById("valWishlist").innerHTML = "";
+        } else if (myURL.indexOf('?') > 0 && myURL.endsWith("?wishlist=true")) {
+            document.getElementById("valWishlist").innerHTML = "Wishlist updated.";
+            document.getElementById("valCreate").innerHTML = "";
         } else {
             document.getElementById("valCreate").innerHTML = "";
+            document.getElementById("valWishlist").innerHTML = "";
         }
 
 </script>   

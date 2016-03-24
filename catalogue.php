@@ -162,7 +162,7 @@
                                 echo ">";
                             }
                             echo "<label for=\"" . $teas_black[$y][1] . "\" class=\"css-label\"></label>";
-                            echo "<img src=\"img/blacktea_1.jpg\" alt=\"Blacktea\" width=\"200\" height=\"200\">";
+                            echo "<img src=\"img/blacktea_1.jpg\" alt=\"Black Tea\" width=\"200\" height=\"200\">";
                             echo "<h2>" . $teas_black[$y][1] . "</h2><br>";
                             echo "<p>" . $teas_black[$y][2] . "</p>";
                             echo "<a class=\"more\" href=\"#\">More</a>";
@@ -178,28 +178,140 @@
 			<span class="anchor" id="greenTea"></span>
 			<div id="green-tea" class="row">
 				<h1>Green</h1>
+                    <?php
+                    $rowcount = ceil($index_green / 2); 
+                    for ($x = 0; $x < $rowcount; $x++) {
+                        echo ("<div class='row'>");
+                       
+                        $startcol = $x * 2;
+                        $endcol = $startcol;
+                        if ($endcol < $index_green) { $endcol++; }
+                        for ($y = $startcol; $y <= $endcol; $y++) {
+                            echo "<div class=\"col-sm-6\"><div>" ;
+                            echo "<input class=\"css-checkbox\" id=\"" . $teas_green[$y][1] . "\"";
+                            echo " type=\"checkbox\" name=\"" . $teas_green[$y][1] . "\" value=\"" . $teas_green[$y][0] . "\"";
+                            if ($teas_green[$y][3] > 0) {
+                                echo " checked>";
+                            } else {
+                                echo ">";
+                            }
+                            echo "<label for=\"" . $teas_green[$y][1] . "\" class=\"css-label\"></label>";
+                            echo "<img src=\"img/greentea_1.png\" alt=\"Green Tea\" width=\"200\" height=\"200\">";
+                            echo "<h2>" . $teas_green[$y][1] . "</h2><br>";
+                            echo "<p>" . $teas_green[$y][2] . "</p>";
+                            echo "<a class=\"more\" href=\"#\">More</a>";
+                            echo "</div></div>";
+                        }
+
+                        echo ("</div>");
+                    }
+                ?>
 			</div>
 
 			<!-- Oolong Tea -->
 			<span class="anchor" id="oolongTea"></span>
 			<div id="oolong-tea" class="row">
 				<h1>Oolong</h1>
+                <?php
+                    $rowcount = ceil($index_oolong / 2); 
+                    for ($x = 0; $x < $rowcount; $x++) {
+                        echo ("<div class='row'>");
+                       
+                        $startcol = $x * 2;
+                        $endcol = $startcol;
+                        if ($endcol < $index_oolong) { $endcol++; }
+                        for ($y = $startcol; $y <= $endcol; $y++) {
+                            echo "<div class=\"col-sm-6\"><div>" ;
+                            echo "<input class=\"css-checkbox\" id=\"" . $teas_oolong[$y][1] . "\"";
+                            echo " type=\"checkbox\" name=\"" . $teas_oolong[$y][1] . "\" value=\"" . $teas_oolong[$y][0] . "\"";
+                            if ($teas_oolong[$y][3] > 0) {
+                                echo " checked>";
+                            } else {
+                                echo ">";
+                            }
+                            echo "<label for=\"" . $teas_oolong[$y][1] . "\" class=\"css-label\"></label>";
+                            echo "<img src=\"img/oolongtea_1.png\" alt=\"Oolong Tea\" width=\"200\" height=\"200\">";
+                            echo "<h2>" . $teas_oolong[$y][1] . "</h2><br>";
+                            echo "<p>" . $teas_oolong[$y][2] . "</p>";
+                            echo "<a class=\"more\" href=\"#\">More</a>";
+                            echo "</div></div>";
+                        }
+
+                        echo ("</div>");
+                    }
+                ?>
 			</div>
 
 			<!-- White Tea -->
 			<span class="anchor" id="whiteTea"></span>
 			<div id="white-tea" class="row">
 				<h1>White</h1>
+                      <?php
+                    $rowcount = ceil($index_white / 2); 
+                    for ($x = 0; $x < $rowcount; $x++) {
+                        echo ("<div class='row'>");
+                       
+                        $startcol = $x * 2;
+                        $endcol = $startcol;
+                        if ($endcol < $index_white) { $endcol++; }
+                        for ($y = $startcol; $y <= $endcol; $y++) {
+                            echo "<div class=\"col-sm-6\"><div>" ;
+                            echo "<input class=\"css-checkbox\" id=\"" . $teas_white[$y][1] . "\"";
+                            echo " type=\"checkbox\" name=\"" . $teas_white[$y][1] . "\" value=\"" . $teas_white[$y][0] . "\"";
+                            if ($teas_white[$y][3] > 0) {
+                                echo " checked>";
+                            } else {
+                                echo ">";
+                            }
+                            echo "<label for=\"" . $teas_white[$y][1] . "\" class=\"css-label\"></label>";
+                            echo "<img src=\"img/whitetea_1.png\" alt=\"White Tea\" width=\"200\" height=\"200\">";
+                            echo "<h2>" . $teas_white[$y][1] . "</h2><br>";
+                            echo "<p>" . $teas_white[$y][2] . "</p>";
+                            echo "<a class=\"more\" href=\"#\">More</a>";
+                            echo "</div></div>";
+                        }
+
+                        echo ("</div>");
+                    }
+                ?>
 			</div>
 
 			<!-- Pu-Erh Tea -->
 			<span class="anchor" id="puerhTea"></span>
 			<div id="puerh-tea" class="row">
 				<h1>Pu-erh</h1>
-			</div>
+                                <?php
+                    $rowcount = ceil($index_puerh / 2); 
+                    for ($x = 0; $x < $rowcount; $x++) {
+                        echo ("<div class='row'>");
+                       
+                        $startcol = $x * 2;
+                        $endcol = $startcol;
+                        if ($endcol < $index_puerh) { $endcol++; }
+                        for ($y = $startcol; $y <= $endcol; $y++) {
+                            echo "<div class=\"col-sm-6\"><div>" ;
+                            echo "<input class=\"css-checkbox\" id=\"" . $teas_puerh[$y][1] . "\"";
+                            echo " type=\"checkbox\" name=\"" . $teas_puerh[$y][1] . "\" value=\"" . $teas_puerh[$y][0] . "\"";
+                            if ($teas_puerh[$y][3] > 0) {
+                                echo " checked>";
+                            } else {
+                                echo ">";
+                            }
+                            echo "<label for=\"" . $teas_puerh[$y][1] . "\" class=\"css-label\"></label>";
+                            echo "<img src=\"img/puerh_1.png\" alt=\"Pu-erh Tea\" width=\"200\" height=\"200\">";
+                            echo "<h2>" . $teas_puerh[$y][1] . "</h2><br>";
+                            echo "<p>" . $teas_puerh[$y][2] . "</p>";
+                            echo "<a class=\"more\" href=\"#\">More</a>";
+                            echo "</div></div>";
+                        }
 
+                        echo ("</div>");
+                    }
+                ?>
+			</div>
+           
             <div id="submit">
-            <input type="submit" value="Update Wishlist">
+            <input type="submit" value="Update Wishlist" id="submitbutton">
             </div>
 		</form>
 	</div>

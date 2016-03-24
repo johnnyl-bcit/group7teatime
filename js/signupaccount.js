@@ -162,3 +162,12 @@ function validateLogin() {
     if (!checkPW()) { valid = false; }
     return valid;
 }
+
+
+function editWishlist() {
+    window.location = 'catalogue.php';
+}
+
+function deleteWishlist() {
+    window.location = 'updatecatalogue.php';
+}

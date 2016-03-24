@@ -119,3 +119,8 @@ textarea:focus, input:focus {
     display:  block;
     height:  1.5em;
 }
+
+#valWishlist {
+    margin-top:  15px;
+    text-align: center; 
+}

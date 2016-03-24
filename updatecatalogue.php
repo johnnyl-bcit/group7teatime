@@ -36,7 +36,7 @@ $sql = "DELETE FROM Favourites WHERE UserID=" . $userid . ";";
 if ($conn->query($sql) === TRUE) {
 }
 
-
+echo count($_POST);
 if (count($_POST) > 0) {   
     $sql = "";
     foreach ($_POST as $key => $value) {
@@ -47,13 +47,18 @@ if (count($_POST) > 0) {
 
     if ((count($_POST) === 1) && ($conn->query($sql) === TRUE)) {
         echo "<script type='text/javascript'>
-               window.location = 'account.html?wishlist=true';
+               window.location = 'account.php?wishlist=true';
                  </script>";
     } else if (($conn->multi_query($sql) === TRUE)) {
         echo "<script type='text/javascript'>
-               window.location = 'account.html?wishlist=true';
+               window.location = 'account.php?wishlist=true';
                  </script>";
     }
+} else {
+    
+        echo "<script type='text/javascript'>
+               window.location = 'account.php?wishlist=true';
+                 </script>";
 }
 
 

@@ -47,7 +47,7 @@ if ($result->num_rows > 0) {
 
 if ($existingid > 0) {
     echo "<script type='text/javascript'>
-           window.location = 'signup.html?exists=true';
+           window.location = 'signup.php?exists=true';
       </script>";
 } else {
    $sql = "INSERT INTO MyUsers(Username, Password, Email, FirstName, LastName, PhoneNumber";
@@ -58,7 +58,7 @@ if ($existingid > 0) {
 
    if ($conn->query($sql) === TRUE) {
     echo "<script type='text/javascript'>
-           window.location = 'login.html?signup=true';
+           window.location = 'login.php?signup=true';
       </script>";
    }
 }

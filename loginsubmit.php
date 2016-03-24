@@ -52,7 +52,7 @@ setcookie($cookie_name2, $cookie_value2, time() + (86400 * 30), "/");
       </script>";
 } else {
     echo "<script type='text/javascript'>
-           window.location = 'login.html?invalid=true';
+           window.location = 'login.php?invalid=true';
       </script>";
 }
 

@@ -97,3 +97,27 @@ label.css-label {
 	background-image:url(../img/star.png);
 }
 
+#submit {
+    text-align:  center;  
+    padding-top:  40px;   
+}
+
+#submitbutton {
+    color:  black;
+    background:  white;
+    font-family: "Calibri", sans-serif;
+    font-size: 1.2em;
+    font-weight: normal;
+    border-radius: 5px;
+    border-style: none;  
+    padding:  10px; 
+}
+#submitbutton:hover {
+    color: #E7512D;
+    background:  #faebd7;
+}
+
+.col-sm-6 p {
+    padding-left:  30px;
+    padding-right: 30px;
+}
