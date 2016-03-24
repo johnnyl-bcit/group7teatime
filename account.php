@@ -89,7 +89,7 @@
     }
     ?>
 	<!-- Banner -->
-	<a href="index.html"><div id="banner" class="container-fluid">
+	<a href="index.php"><div id="banner" class="container-fluid">
 		<img src="img/banner.png" alt="Banner Image">
 	</div></a>
 

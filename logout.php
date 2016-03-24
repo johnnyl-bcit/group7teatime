@@ -21,7 +21,7 @@ setcookie("userid", "", time() - 3600);
     
 
 echo "<script type='text/javascript'>
-    window.location = 'index.html';
+    window.location = 'index.php';
     </script>";
 
 ?>

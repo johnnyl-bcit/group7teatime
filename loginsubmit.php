@@ -48,7 +48,7 @@ $cookie_name2 = "userid";
 $cookie_value2 = $id;
 setcookie($cookie_name2, $cookie_value2, time() + (86400 * 30), "/");
     echo "<script type='text/javascript'>
-           window.location = 'index.html';
+           window.location = 'index.php';
       </script>";
 } else {
     echo "<script type='text/javascript'>
