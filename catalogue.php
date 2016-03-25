@@ -16,7 +16,11 @@
 	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 </head>
      <?php
-        if(isset($_COOKIE["userid"])) { $userid = $_COOKIE["userid"];}
+        $userid = 0; 
+
+        if(isset($_COOKIE["userid"])) { 
+            $userid = $_COOKIE["userid"];
+        }
 
 
         $servername = "mysql4.000webhost.com";
@@ -50,6 +54,8 @@
         $index_oolong = 0;
         $index_white = 0;
         $index_puerh = 0;
+
+        $wishlist_flag = 0; 
        
         $result=$conn->query($sql);
         if ($result->num_rows > 0) {
@@ -59,6 +65,10 @@
                 $teaname = $row['TeaName'];
                 $teadescription = $row['Description'];
                 $teafave =  $row['IS_FAVE'];
+
+                if ($teafave > 0) {
+                    $wishlist_flag = 1;
+                }
 
                 switch ($teatype) {
                 case "Black":
@@ -142,7 +152,7 @@
 
 			<!-- Black Tea -->
 			<span class="anchor" id="blackTea"></span>
-			<div id="black-tea">
+			<div id="black-tea" class="row">
 				<h1>Black</h1>
                 <?php
                     $rowcount = ceil($index_black / 2); 
@@ -309,10 +319,22 @@
                     }
                 ?>
 			</div>
-           
-            <div id="submit">
-            <input type="submit" value="Update Wishlist" id="submitbutton">
-            </div>
+            <?php
+                if ($userid > 0) {
+                    echo "<div id=\"submit\">";
+                    echo "<input type=\"submit\" value=\"";
+                    if ($wishlist_flag > 0) {
+                        echo "Update Wishlist";
+                    } else {
+                        echo "Save Wishlist";
+                    }
+                    echo "\" id=\"submitbutton\">";
+                    echo "</div>";
+                }
+            ?>
+            
+            
+            
 		</form>
 	</div>
 

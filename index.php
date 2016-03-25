@@ -122,9 +122,9 @@
 	<footer class="footer">
 		<div class="container-fluid">
 			<ul>
-				<li><a href="aboutus.html">About Us</a></li> 
-				<li><a href="contactus.html">Contact Us</a></li>
-				<li><a href="catalogue.html">Catalogue</a></li>
+				<li><a href="aboutus.php">About Us</a></li> 
+				<li><a href="contactus.php">Contact Us</a></li>
+				<li><a href="catalogue.php">Catalogue</a></li>
 			</ul>
 		</div>
 	</footer>

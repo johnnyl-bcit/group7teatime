@@ -4,14 +4,14 @@
     <head>
 	    <link rel="stylesheet" href="style/validation.css">
         <meta charset="utf-8" />
-        <title>Tea Time: Modifying wishlist...</title>
+        <title>Deleting account...</title>
     </head>
     <body>
+        
     </body>
 </html>
 
 <?php
-
 if(isset($_COOKIE["userid"])) {
 $userid = $_COOKIE["userid"];
 
@@ -28,41 +28,22 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
+$sql = "DELETE FROM MyUsers WHERE ID=" . $userid;
+$sql .= "; DELETE FROM Favourites WHERE UserID=" . $userid . ";";
 
-
-$sql = "DELETE FROM Favourites WHERE UserID=" . $userid . ";";
-
-
-if ($conn->query($sql) === TRUE) {
-}
-
-echo count($_POST);
-if (count($_POST) > 0) {   
-    $sql = "";
-    foreach ($_POST as $key => $value) {
-        $sql .= "INSERT INTO Favourites (UserID, TeaID)VALUES(" . $userid . ", " . $value . "); ";
-    }
-
-
-
-    if ((count($_POST) === 1) && ($conn->query($sql) === TRUE)) {
-        echo "<script type='text/javascript'>
-               window.location = 'account.php?wishlist=true';
-                 </script>";
-    } else if (($conn->multi_query($sql) === TRUE)) {
-        echo "<script type='text/javascript'>
-               window.location = 'account.php?wishlist=true';
-                 </script>";
-    }
-} else {
+    if (($conn->multi_query($sql) === TRUE)) {
+        
+        if(isset($_COOKIE["username"])) { setcookie("username", "", time() - 3600); }
+        if(isset($_COOKIE["userid"])) { setcookie("userid", "", time() - 3600); }
     
         echo "<script type='text/javascript'>
-               window.location = 'account.php?wishlist=false';
+               window.location = 'login.php?delete=true';
                  </script>";
-}
-
-
-$conn->close();
+    } else {
+        echo "<script type='text/javascript'>
+           window.location = 'account.php';
+        </script>";
+    }
 } else {
     echo "<script type='text/javascript'>
            window.location = 'login.php';

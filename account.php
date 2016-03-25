@@ -23,6 +23,11 @@
     $( "input[type=submit]" )
       .button()
     });
+    
+    $(function() {
+    $( "input[type=button]" )
+      .button()
+    });
     </script>
 
 	<link rel="stylesheet" href="style/account.css">
@@ -86,6 +91,10 @@
 
     
         $conn->close();
+    } else {
+        echo "<script type='text/javascript'>
+            window.location = 'login.php';
+            </script>";
     }
     ?>
 	<!-- Banner -->
@@ -215,6 +224,14 @@
                         <span class="validation" id="valModify"></span>
                        </td>
 				   </tr> 
+				   <tr>
+					   <td>
+					   </td>
+                       <td>
+						<input type="button" value="Delete Account" id="delete" onclick="deleteAccount()"> 
+                       </td>
+				   </tr> 
+
                     
 				</table>
 			</form>  
@@ -237,12 +254,19 @@
                ?>
 			  <tr> 
 				<td colspan="2">
-					<input type="submit" value="Edit Wish List" name="editwl" id="editwl" onclick="editWishlist()"> 
+					<input type="submit" 
+                    value="<?php if (count($teatypes) > 0) { echo "Edit Wishlist"; } else { echo "Create Wishlist";}?>" 
+                    name="editwl" id="editwl" onclick="editWishlist()"> 
 				</td> 
 			  </tr> 
 			  <tr> 
 				<td colspan="2">
-					<input type="submit" value="Delete Wish List" name="deletewl" id="deletewl" onclick="deleteWishlist()"> 
+                    <?php
+                        if (count($teatypes) > 0) {
+                            echo "<input type=\"submit\" value=\"Delete Wish List\" name=\"deletewl\"";
+                            echo " id=\"deletewl\" onclick=\"deleteWishlist()\">";
+                        }
+                    ?>
 				</td> 
 			  </tr> 
 			</table> 
@@ -271,16 +295,19 @@
         
 
         if (myURL.indexOf('?') > 0 && myURL.endsWith("?exists=true")) {
-            document.getElementById("valCreate").innerHTML = "The username you selected already exists.";
+            document.getElementById("valModify").innerHTML = "The username you selected already exists.";
             document.getElementById("valWishlist").innerHTML = "";
         } else if (myURL.indexOf('?') > 0 && myURL.endsWith("?success=true")) {
-            document.getElementById("valCreate").innerHTML = "Account modified successfully.";
+            document.getElementById("valModify").innerHTML = "Account modified successfully.";
             document.getElementById("valWishlist").innerHTML = "";
         } else if (myURL.indexOf('?') > 0 && myURL.endsWith("?wishlist=true")) {
             document.getElementById("valWishlist").innerHTML = "Wishlist updated.";
-            document.getElementById("valCreate").innerHTML = "";
+            document.getElementById("valModify").innerHTML = "";
+        } else if (myURL.indexOf('?') > 0 && myURL.endsWith("?wishlist=false")) {
+            document.getElementById("valWishlist").innerHTML = "Wishlist deleted.";
+            document.getElementById("valModify").innerHTML = "";
         } else {
-            document.getElementById("valCreate").innerHTML = "";
+            document.getElementById("valModify").innerHTML = "";
             document.getElementById("valWishlist").innerHTML = "";
         }
 

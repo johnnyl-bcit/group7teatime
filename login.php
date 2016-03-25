@@ -139,6 +139,8 @@
             document.getElementById("valLogin").innerHTML = "Invalid username or password.";
         } else if (myURL.indexOf('?') > 0 && myURL.endsWith("?signup=true")) {
             document.getElementById("valLogin").innerHTML = "Account created. Please sign in.";
+        } else if (myURL.indexOf('?') > 0 && myURL.endsWith("?delete=true")) {
+            document.getElementById("valLogin").innerHTML = "Your account has been deleted.";
         } else {
             document.getElementById("valLogin").innerHTML = "";
         }

@@ -171,3 +171,11 @@ function editWishlist() {
 function deleteWishlist() {
     window.location = 'updatecatalogue.php';
 }
+
+function deleteAccount() {
+    var result = confirm("Are you sure you wish to delete your account?");
+
+    if (result == true) {
+        window.location = 'deleteaccount.php';
+    }
+}

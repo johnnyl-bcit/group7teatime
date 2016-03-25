@@ -64,6 +64,10 @@ if ($existingid > 0) {
    $sql .= " WHERE ID=" . $userid;
 
    if ($conn->query($sql) === TRUE) {
+    //update cookies in case username has changed 
+    setcookie("username", $user, time() + (86400 * 30), "/");
+    setcookie("userid", $userid, time() + (86400 * 30), "/");
+    
     echo "<script type='text/javascript'>
            window.location = 'account.php?success=true';
       </script>";
