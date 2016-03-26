@@ -40,8 +40,7 @@
         $sql .= " INNER JOIN TeaTypes ON TeaTypes.ID = Teas.Type";
         $sql .= " LEFT JOIN Favourites ON Favourites.TeaID=Teas.ID AND Favourites.UserID=" . $userid; 
         $sql .= " ORDER BY TEA_TYPE, ID";
-        
-        echo $sql;    
+          
         
         $teas_black = array();
         $teas_green = array();

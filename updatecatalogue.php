@@ -32,11 +32,10 @@ if ($conn->connect_error) {
 
 $sql = "DELETE FROM Favourites WHERE UserID=" . $userid . ";";
 
-
 if ($conn->query($sql) === TRUE) {
+
 }
 
-echo count($_POST);
 if (count($_POST) > 0) {   
     $sql = "";
     foreach ($_POST as $key => $value) {
