@@ -164,12 +164,14 @@
                         if ($endcol < $index_black) { $endcol++; }
                         for ($y = $startcol; $y <= $endcol; $y++) {
                             echo "<div class=\"col-sm-6\"><div>" ;
-                            echo "<input class=\"css-checkbox\" id=\"" . $teas_black[$y][1] . "\"";
-                            echo " type=\"checkbox\" name=\"" . $teas_black[$y][1] . "\" value=\"" . $teas_black[$y][0] . "\"";
-                            if ($teas_black[$y][3] > 0) {
-                                echo " checked>";
-                            } else {
-                                echo ">";
+                            if ($userid > 0) {
+                                echo "<input class=\"css-checkbox\" id=\"" . $teas_black[$y][1] . "\"";
+                                echo " type=\"checkbox\" name=\"" . $teas_black[$y][1] . "\" value=\"" . $teas_black[$y][0] . "\"";
+                                if ($teas_black[$y][3] > 0) {
+                                    echo " checked>";
+                                } else {
+                                    echo ">";
+                                }
                             }
                             echo "<label for=\"" . $teas_black[$y][1] . "\" class=\"css-label\"></label>";
                             echo "<img src=\"img/blacktea_1.jpg\" alt=\"Black Tea\" width=\"200\" height=\"200\">";
@@ -198,12 +200,14 @@
                         if ($endcol < $index_green) { $endcol++; }
                         for ($y = $startcol; $y <= $endcol; $y++) {
                             echo "<div class=\"col-sm-6\"><div>" ;
-                            echo "<input class=\"css-checkbox\" id=\"" . $teas_green[$y][1] . "\"";
-                            echo " type=\"checkbox\" name=\"" . $teas_green[$y][1] . "\" value=\"" . $teas_green[$y][0] . "\"";
-                            if ($teas_green[$y][3] > 0) {
-                                echo " checked>";
-                            } else {
-                                echo ">";
+                            if ($userid > 0) {
+                                echo "<input class=\"css-checkbox\" id=\"" . $teas_green[$y][1] . "\"";
+                                echo " type=\"checkbox\" name=\"" . $teas_green[$y][1] . "\" value=\"" . $teas_green[$y][0] . "\"";
+                                if ($teas_green[$y][3] > 0) {
+                                    echo " checked>";
+                                } else {
+                                    echo ">";
+                                }
                             }
                             echo "<label for=\"" . $teas_green[$y][1] . "\" class=\"css-label\"></label>";
                             echo "<img src=\"img/greentea_1.png\" alt=\"Green Tea\" width=\"200\" height=\"200\">";
@@ -232,12 +236,14 @@
                         if ($endcol < $index_oolong) { $endcol++; }
                         for ($y = $startcol; $y <= $endcol; $y++) {
                             echo "<div class=\"col-sm-6\"><div>" ;
-                            echo "<input class=\"css-checkbox\" id=\"" . $teas_oolong[$y][1] . "\"";
-                            echo " type=\"checkbox\" name=\"" . $teas_oolong[$y][1] . "\" value=\"" . $teas_oolong[$y][0] . "\"";
-                            if ($teas_oolong[$y][3] > 0) {
-                                echo " checked>";
-                            } else {
-                                echo ">";
+                            if ($userid > 0) {
+                                echo "<input class=\"css-checkbox\" id=\"" . $teas_oolong[$y][1] . "\"";
+                                echo " type=\"checkbox\" name=\"" . $teas_oolong[$y][1] . "\" value=\"" . $teas_oolong[$y][0] . "\"";
+                                if ($teas_oolong[$y][3] > 0) {
+                                    echo " checked>";
+                                } else {
+                                    echo ">";
+                                }
                             }
                             echo "<label for=\"" . $teas_oolong[$y][1] . "\" class=\"css-label\"></label>";
                             echo "<img src=\"img/oolongtea_1.png\" alt=\"Oolong Tea\" width=\"200\" height=\"200\">";
@@ -266,12 +272,14 @@
                         if ($endcol < $index_white) { $endcol++; }
                         for ($y = $startcol; $y <= $endcol; $y++) {
                             echo "<div class=\"col-sm-6\"><div>" ;
-                            echo "<input class=\"css-checkbox\" id=\"" . $teas_white[$y][1] . "\"";
-                            echo " type=\"checkbox\" name=\"" . $teas_white[$y][1] . "\" value=\"" . $teas_white[$y][0] . "\"";
-                            if ($teas_white[$y][3] > 0) {
-                                echo " checked>";
-                            } else {
-                                echo ">";
+                            if ($userid > 0) {
+                                echo "<input class=\"css-checkbox\" id=\"" . $teas_white[$y][1] . "\"";
+                                echo " type=\"checkbox\" name=\"" . $teas_white[$y][1] . "\" value=\"" . $teas_white[$y][0] . "\"";
+                                if ($teas_white[$y][3] > 0) {
+                                    echo " checked>";
+                                } else {
+                                    echo ">";
+                                }
                             }
                             echo "<label for=\"" . $teas_white[$y][1] . "\" class=\"css-label\"></label>";
                             echo "<img src=\"img/whitetea_1.png\" alt=\"White Tea\" width=\"200\" height=\"200\">";
@@ -300,12 +308,14 @@
                         if ($endcol < $index_puerh) { $endcol++; }
                         for ($y = $startcol; $y <= $endcol; $y++) {
                             echo "<div class=\"col-sm-6\"><div>" ;
-                            echo "<input class=\"css-checkbox\" id=\"" . $teas_puerh[$y][1] . "\"";
-                            echo " type=\"checkbox\" name=\"" . $teas_puerh[$y][1] . "\" value=\"" . $teas_puerh[$y][0] . "\"";
-                            if ($teas_puerh[$y][3] > 0) {
-                                echo " checked>";
-                            } else {
-                                echo ">";
+                            if ($userid > 0) {
+                                echo "<input class=\"css-checkbox\" id=\"" . $teas_puerh[$y][1] . "\"";
+                                echo " type=\"checkbox\" name=\"" . $teas_puerh[$y][1] . "\" value=\"" . $teas_puerh[$y][0] . "\"";
+                                if ($teas_puerh[$y][3] > 0) {
+                                    echo " checked>";
+                                } else {
+                                    echo ">";
+                                }
                             }
                             echo "<label for=\"" . $teas_puerh[$y][1] . "\" class=\"css-label\"></label>";
                             echo "<img src=\"img/puerh_1.png\" alt=\"Pu-erh Tea\" width=\"200\" height=\"200\">";
