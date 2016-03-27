@@ -86,7 +86,7 @@
 			<div id="map" class="col-sm-6">
 				<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
 				<div>
-					<div id="gmap_canvas" style="height:450px;width:450px;">	
+					<div id="gmap_canvas">	
 					</div>
 					<a class="google-map-code" href="http://www.themecircle.net" id="get-map-data">Tea Time</a>
 				</div>

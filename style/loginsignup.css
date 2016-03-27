@@ -36,7 +36,6 @@ textarea:focus, input:focus {
     padding: 2px;
 }
 
-
 #form label {
 	color: white;
 }
@@ -104,4 +103,11 @@ fieldset .help {
     color:  white;
     display:  block;
     height:  1.5em;
+}
+
+/* Code for responsive design */
+@media only screen and (max-width: 765px) {
+	#form {
+		width: 100%;
+	}
 }

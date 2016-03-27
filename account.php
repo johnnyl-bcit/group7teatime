@@ -311,4 +311,4 @@
             document.getElementById("valWishlist").innerHTML = "";
         }
 
-</script>   
+</script>

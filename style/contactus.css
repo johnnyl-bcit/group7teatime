@@ -30,14 +30,34 @@
 	width:450px;
 }
 
-#gmap_canvas img {
-	max-width:none!important;
-	background:none!important
+#gmap_canvas {
+	height: 450px;
+	width: 450px;
 }
 
-/* Code for responsive design; hide banner, shift navbar and content to top */
+#gmap_canvas img {
+	max-width:none!important;
+	background:none!important;
+}
+
+/* Code for responsive design */
 @media only screen and (max-width: 765px) {
-	#map {
-	border-left: none;
+	#main {
+		margin-bottom: 4em;
 	}
+
+	#map {
+		border-left: none;
+	}
+
+	#map > div {
+		height: 325px;
+		width: 325px;
+	}
+
+	#gmap_canvas {
+		height: 325px;
+		width: 325px;
+	}
+
 }

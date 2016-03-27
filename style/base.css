@@ -152,7 +152,7 @@ body {
 	color: #000000;
 }
 
-/* Code for responsive design; hide banner, shift navbar and content to top */
+/* Code for responsive design */
 @media only screen and (max-width: 765px) {
 	#banner {
 		display: none;
@@ -164,6 +164,18 @@ body {
 
 	#main {
 		margin-top: 50px;
+	}
+
+	#welcome {
+		width: 85%;
+	}
+
+	#home-content {
+		width: 95%;
+	}
+
+	.footer li {
+		padding-right: 0px;
 	}
 }
 
