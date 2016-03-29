@@ -80,16 +80,16 @@
 			<!-- Wrapper for slides -->
 			<div class="carousel-inner" role="listbox">
 			  <div class="item active">
-			    <img src="img/teaplantation.jpg" alt="teapot">  
+			    <img src="img/teaplantation.jpg" alt="Tea Plantation">  
 			  </div>
 			  <div class="item">
-			    <img src="img/teaplantation.jpg" alt="plantation">
+			    <img src="img/plant.png" alt="Tea Plant">
 			  </div>    
 			  <div class="item">
-			    <img src="img/teaplantation.jpg" alt="loosetea"> 
+			    <img src="img/teacup.png" alt="Teacup"> 
 			  </div>
 			  <div class="item">
-			    <img src="img/teaplantation.jpg" alt="tea">
+			    <img src="img/spoons.png" alt="Loose Tea">
 			  </div>  
 			</div>
 
