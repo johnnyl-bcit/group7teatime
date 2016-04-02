@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
     <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
     <script>
-        $(function () {
+        $(function() {
             $("input[type=submit]")
           .button()
         });

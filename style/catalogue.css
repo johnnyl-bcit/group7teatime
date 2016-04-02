@@ -5,6 +5,7 @@
 #main h1 {
 	text-align: center;
 	color: white;
+	margin-bottom: 20px;
 }
 
 #main .col-sm-6 {
@@ -16,13 +17,14 @@
 
 #main .col-sm-6 > div {
 	position: relative;
-	background: #E7512D;
+	background: #59b333;
 	overflow: auto;
 	border-radius: 15px;
 }
 
 #main .col-sm-6 > div > h2{
 	text-align: center;
+	margin-top: 10px;
 }
 
 #main .col-sm-6 > div > p {
@@ -120,4 +122,17 @@ label.css-label {
 .col-sm-6 p {
     padding-left:  30px;
     padding-right: 30px;
+}
+
+/* Code for responsive design */
+@media only screen and (max-width: 765px) {
+	#main h1 {
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+
+	#main img {
+		width: 150px !important;
+		height: 150px !important;
+	}
 }

@@ -105,16 +105,14 @@
 		</div> <!-- myCarousel -->
 
 		<div id="welcome">
-		Welcome: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris pharetra, augue ac scelerisque ornare, eros justo dapibus leo
-		, at dictum turpis lacus sit amet neque. Etiam quis volutpat sem. Donec sit amet sollicitudin magna, eget laoreet purus. Etiam rhoncus imperdiet nisl.
+		<h1>Welcome to Tea Time!</h1>
+		<p>Here at Tea Time we pride ourselves in the quality of our loose leaf teas.  Our tea variety ranges from White to Pu-Erh, which can be viewed through our Online Catalogue. If you have any questions about our products, please feel free to send us a message or give us a call with the information on our Contact page. If you are interested about our daily operations, or what to expect when you come in to Tea Time, the information can be found on our About Us page.</p>
 		</div> 
 
 		<div id="home-content">
-		Etiam cursus augue in ipsum ullamcorper viverra. Sed tincidunt sapien nec velit tincidunt, eget viverra elit tempor. Nam porttitor aliquet pharetra. 
-		Phasellus tempus, elit sit amet ornare vestibulum, dui est tempus magna, vitae suscipit metus nulla vitae mauris. Quisque ac risus fringilla, 
-		dapibus dui non, placerat elit. Nam placerat, lacus id efficitur pulvinar, sapien metus dapibus risus, laoreet ullamcorper nisl turpis et elit. 
-		Phasellus tellus felis, tempus vitae sodales in, feugiat eu mi. Cras ut libero ante. Interdum et malesuada fames ac ante ipsum primis in faucibus.
-		Phasellus placerat et lorem a bibendum.
+		<p>We hold our suppliers to a high standard of quality, making sure every step is followed to produce the best tea available under ethical conditions. We are dedicated at Tea Time to be a part of the solution for healthier living, which has led us to serving local fair-trade and organic tea.</p>
+		<p>What does organic mean to us? For starters we work carefully with all of our artisan tea growers ensuring that they are certified organic meaning no fertilizers, herbicides and pesticides. This in turn reduces the amount chemicals damaging the environment and less harmful products being put into our bodies.</p>
+		<p>What does fair-trade mean to us? Fair-trade standards play an important role when picking a supplier. We want to encourage proper working condition around the world; this helps all the smaller farm organisations giving them the boost they need to produce top standard leaves. On top of that this ensures that they are being paid a fair amount of money to support standard living expenses.</p>
 		</div>
 	</div>
 

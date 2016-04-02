@@ -6,19 +6,11 @@ body {
 	margin-left: auto;
 	margin-right: auto;
 	margin-bottom: 25px;
-	background-color: #E7512D;
+	background-color: #397421;
 	color: white;
 	padding: 10px;
 	text-align: center;
 	font-size: 1.5em;
-}
-
-input, textarea {
-    color: black;
-}
-
-textarea:focus, input:focus {
-    color: black;
 }
 
 #form {
@@ -26,7 +18,7 @@ textarea:focus, input:focus {
 	margin-right: auto;
 	margin-bottom: 50px;
 	width: 500px;
-	background-color: #E7512D;
+	background-color: #397421;
 	padding: 10px;
 	font-size: 1.2em;
 }
@@ -54,14 +46,6 @@ textarea:focus, input:focus {
 #form a {
 	text-decoration: underline;
 	color: white;
-}
-
-textarea:focus, input:focus {
-    color: black;
-}
-
-#submit {
-	color: black;
 }
 
 #validation {
@@ -95,11 +79,11 @@ fieldset .help {
 
 .ui-button:hover {
     color: #E7512D;
-    background:  #faebd7;
+    background: #faebd7;
 }
 
 .validation {
-    font-size:  0.7em;
+    font-size: 0.7em;
     color:  white;
     display:  block;
     height:  1.5em;

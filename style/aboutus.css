@@ -21,6 +21,11 @@
 	margin-bottom: 20px;
 }
 
+#main h3 {
+	padding-left: 120px;
+	color: white;
+}
+
 #main p {
 	padding-left: 80px;
 	padding-right: 80px;
@@ -32,6 +37,10 @@
 	#main {
 		background-size: auto 100%;
 		background-position: 50% 0%;
+	}
+
+	#main h3 {
+		padding-left: 30px;
 	}
 
 	#main p {

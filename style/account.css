@@ -3,7 +3,7 @@
 	margin-left: auto;
 	margin-right: auto;
 	margin-bottom: 25px;
-	background-color: #E7512D;
+	background-color: #397421;
 	color: white;
 	padding: 10px;
 	text-align: center;
@@ -25,7 +25,7 @@ textarea:focus, input:focus {
 	margin-bottom:  25px; 
 	width: 50%;
     min-width:  500px;
-	background-color: #E7512D;
+	background-color: #397421;
 	padding: 10px;
 	font-size: 1.2em;
 }
@@ -63,7 +63,7 @@ textarea:focus, input:focus {
 	width: 30%;
     min-width:  300px;
 	height: 400px; 
-	background-color: #E7512D;
+	background-color: #397421;
 	padding: 10px;
 	color: white;
 	font-size: 1.2em;
@@ -94,7 +94,6 @@ textarea:focus, input:focus {
 	width: 100%;
 	font-size: 0.8em;
 	border: 1px solid #faebd7;
-    color:  black;
 }
 
 #submit {
