@@ -155,6 +155,7 @@
 				<h1>Black</h1>
                 <?php
                     $rowcount = ceil($index_black / 2); 
+                    $teanum = 0; 
                     for ($x = 0; $x < $rowcount; $x++) {
                         echo ("<div class='row'>");
                        
@@ -172,11 +173,11 @@
                                     echo ">";
                                 }
                             }
+                            $teanum++;
                             echo "<label for=\"" . $teas_black[$y][1] . "\" class=\"css-label\"></label>";
-                            echo "<img src=\"img/blacktea_1.jpg\" alt=\"Black Tea\" width=\"200\" height=\"200\">";
+                            echo "<img src=\"img/blacktea_" . $teanum . ".jpg\" alt=\"Black Tea\" width=\"200\" height=\"200\">";
                             echo "<h2>" . $teas_black[$y][1] . "</h2><br>";
                             echo "<p>" . $teas_black[$y][2] . "</p>";
-                            echo "<a class=\"more\" href=\"#\">More</a>";
                             echo "</div></div>";
                         }
 
@@ -190,6 +191,7 @@
 			<div id="green-tea" class="row">
 				<h1>Green</h1>
                     <?php
+                    $teanum = 0;
                     $rowcount = ceil($index_green / 2); 
                     for ($x = 0; $x < $rowcount; $x++) {
                         echo ("<div class='row'>");
@@ -208,11 +210,11 @@
                                     echo ">";
                                 }
                             }
+                            $teanum++;
                             echo "<label for=\"" . $teas_green[$y][1] . "\" class=\"css-label\"></label>";
-                            echo "<img src=\"img/greentea_1.png\" alt=\"Green Tea\" width=\"200\" height=\"200\">";
+                            echo "<img src=\"img/greentea_" . $teanum . ".jpg\" alt=\"Green Tea\" width=\"200\" height=\"200\">";
                             echo "<h2>" . $teas_green[$y][1] . "</h2><br>";
                             echo "<p>" . $teas_green[$y][2] . "</p>";
-                            echo "<a class=\"more\" href=\"#\">More</a>";
                             echo "</div></div>";
                         }
 
@@ -226,6 +228,7 @@
 			<div id="oolong-tea" class="row">
 				<h1>Oolong</h1>
                 <?php
+                    $teanum = 0;
                     $rowcount = ceil($index_oolong / 2); 
                     for ($x = 0; $x < $rowcount; $x++) {
                         echo ("<div class='row'>");
@@ -244,11 +247,11 @@
                                     echo ">";
                                 }
                             }
+                            $teanum++;
                             echo "<label for=\"" . $teas_oolong[$y][1] . "\" class=\"css-label\"></label>";
-                            echo "<img src=\"img/oolongtea_1.png\" alt=\"Oolong Tea\" width=\"200\" height=\"200\">";
+                            echo "<img src=\"img/oolongtea_" . $teanum . ".jpg\" alt=\"Oolong Tea\" width=\"200\" height=\"200\">";
                             echo "<h2>" . $teas_oolong[$y][1] . "</h2><br>";
                             echo "<p>" . $teas_oolong[$y][2] . "</p>";
-                            echo "<a class=\"more\" href=\"#\">More</a>";
                             echo "</div></div>";
                         }
 
@@ -263,6 +266,7 @@
 				<h1>White</h1>
                       <?php
                     $rowcount = ceil($index_white / 2); 
+                    $teanum = 0;
                     for ($x = 0; $x < $rowcount; $x++) {
                         echo ("<div class='row'>");
                        
@@ -280,11 +284,11 @@
                                     echo ">";
                                 }
                             }
+                            $teanum++;
                             echo "<label for=\"" . $teas_white[$y][1] . "\" class=\"css-label\"></label>";
-                            echo "<img src=\"img/whitetea_1.png\" alt=\"White Tea\" width=\"200\" height=\"200\">";
+                            echo "<img src=\"img/whitetea_" . $teanum . ".jpg\" alt=\"White Tea\" width=\"200\" height=\"200\">";
                             echo "<h2>" . $teas_white[$y][1] . "</h2><br>";
                             echo "<p>" . $teas_white[$y][2] . "</p>";
-                            echo "<a class=\"more\" href=\"#\">More</a>";
                             echo "</div></div>";
                         }
 
@@ -299,6 +303,7 @@
 				<h1>Pu-erh</h1>
                                 <?php
                     $rowcount = ceil($index_puerh / 2); 
+                    $teanum = 0; 
                     for ($x = 0; $x < $rowcount; $x++) {
                         echo ("<div class='row'>");
                        
@@ -316,11 +321,11 @@
                                     echo ">";
                                 }
                             }
+                            $teanum++;
                             echo "<label for=\"" . $teas_puerh[$y][1] . "\" class=\"css-label\"></label>";
-                            echo "<img src=\"img/puerh_1.png\" alt=\"Pu-erh Tea\" width=\"200\" height=\"200\">";
+                            echo "<img src=\"img/puerh_" . $teanum . ".jpg\" alt=\"Pu-erh Tea\" width=\"200\" height=\"200\">";
                             echo "<h2>" . $teas_puerh[$y][1] . "</h2><br>";
                             echo "<p>" . $teas_puerh[$y][2] . "</p>";
-                            echo "<a class=\"more\" href=\"#\">More</a>";
                             echo "</div></div>";
                         }
 

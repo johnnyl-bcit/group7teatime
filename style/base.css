@@ -135,6 +135,7 @@ body {
 	margin-right: auto;
 	margin-bottom: 30px;
 	border-radius: 15px;
+    text-shadow: 2px 1px #CCCCCC; 
 }
 
 #home-content p {
@@ -164,7 +165,7 @@ body {
 	color: #000000;
 }
 
-/* Code for responsive design */
+/* Code for responsive design; hide banner, shift navbar and content to top */
 @media only screen and (max-width: 765px) {
 	#banner {
 		display: none;
