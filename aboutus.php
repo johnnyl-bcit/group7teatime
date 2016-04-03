@@ -32,7 +32,7 @@
 			        <span class="icon-bar"></span> 
 			        <span class="icon-bar"></span>
 			  	</button>
-		  		<a href="#"><img class="center-block" src="img/bannersmall.png" alt="Nav Bar Logo"></a>
+		  		<a href="index.php"><img class="center-block" src="img/bannersmall.png" alt="Nav Bar Logo"></a>
 	  		</div>
 
 			<div class="collapse navbar-collapse" id="myNavbar">

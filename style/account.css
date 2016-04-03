@@ -109,8 +109,8 @@ textarea:focus, input:focus {
 }
 
 .ui-button:hover {
-    color: #E7512D;
-    background:  #faebd7;
+    color: #ffd700;
+    background:  #fffcea;
 }
 .validation {
     font-size:  0.7em;
