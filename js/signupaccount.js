@@ -1,4 +1,4 @@
-var alertColor = "rgb(240, 191, 125)";
+var alertColor = "rgb(255,215,0)";
 var regColor = "white";
 
 function checkEmail() {
